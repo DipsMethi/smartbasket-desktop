@@ -1,0 +1,50 @@
+﻿AppType=JavaFX
+Build1=Default,b4j.example
+File1=CustomerView.bjl
+File2=Dashboard.bjl
+File3=LoginForm.bjl
+File4=RegistrationForm.bjl
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+Group=Default Group
+Library1=b4xcollections
+Library10=serial
+Library2=dbutils
+Library3=jcore
+Library4=jdbcsql
+Library5=jfx
+Library6=jserver
+Library7=jsql
+Library8=jstringutils
+Library9=jxui
+Module1=CustomerView
+Module10=User
+Module2=Dashboard
+Module3=DatabaseService
+Module4=Item
+Module5=Logger
+Module6=LoginForm
+Module7=LoginService
+Module8=RegistrationForm
+Module9=RegistrationService
+NumberOfFiles=4
+NumberOfLibraries=10
+NumberOfModules=10
+Version=9.3
+@EndOfDesignText@
+#Region Project Attributes 
+	#MainFormWidth: 600
+	#MainFormHeight: 600
+	#AdditionalJar: mysql-connector-java-8.0.25
+#End Region
+
+Sub Process_Globals
+	Private fx As JFX
+	Public Log As Logger
+End Sub
+
+Sub AppStart (Form1 As Form, Args() As String)
+	LoginForm.Show
+End Sub
