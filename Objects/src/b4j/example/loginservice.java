@@ -48,13 +48,13 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="loginservice";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=2097152;
- //BA.debugLineNum = 2097152;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=2097153;
- //BA.debugLineNum = 2097153;BA.debugLine="dbService.Initialize";
+RDebugUtils.currentLine=8257536;
+ //BA.debugLineNum = 8257536;BA.debugLine="Public Sub Initialize";
+RDebugUtils.currentLine=8257537;
+ //BA.debugLineNum = 8257537;BA.debugLine="dbService.Initialize";
 __ref._dbservice /*b4j.example.databaseservice*/ ._initialize /*String*/ (null,ba);
-RDebugUtils.currentLine=2097154;
- //BA.debugLineNum = 2097154;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8257538;
+ //BA.debugLineNum = 8257538;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _login(b4j.example.loginservice __ref,String _username,String _password) throws Exception{
@@ -63,44 +63,44 @@ RDebugUtils.currentModule="loginservice";
 if (Debug.shouldDelegate(ba, "login", false))
 	 {return ((Boolean) Debug.delegate(ba, "login", new Object[] {_username,_password}));}
 boolean _userexist = false;
-RDebugUtils.currentLine=2162688;
- //BA.debugLineNum = 2162688;BA.debugLine="Public Sub Login(username As String, password As S";
-RDebugUtils.currentLine=2162689;
- //BA.debugLineNum = 2162689;BA.debugLine="Dim userExist As Boolean = False";
+RDebugUtils.currentLine=8323072;
+ //BA.debugLineNum = 8323072;BA.debugLine="Public Sub Login(username As String, password As S";
+RDebugUtils.currentLine=8323073;
+ //BA.debugLineNum = 8323073;BA.debugLine="Dim userExist As Boolean = False";
 _userexist = __c.False;
-RDebugUtils.currentLine=2162691;
- //BA.debugLineNum = 2162691;BA.debugLine="Try";
-try {RDebugUtils.currentLine=2162692;
- //BA.debugLineNum = 2162692;BA.debugLine="If ( dbService.sql.IsInitialized = True) Then";
+RDebugUtils.currentLine=8323075;
+ //BA.debugLineNum = 8323075;BA.debugLine="Try";
+try {RDebugUtils.currentLine=8323076;
+ //BA.debugLineNum = 8323076;BA.debugLine="If ( dbService.sql.IsInitialized = True) Then";
 if ((__ref._dbservice /*b4j.example.databaseservice*/ ._sql /*anywheresoftware.b4j.objects.SQL*/ .IsInitialized()==__c.True)) { 
-RDebugUtils.currentLine=2162693;
- //BA.debugLineNum = 2162693;BA.debugLine="userDetails = dbService.sql.ExecQuery($\"SELECT";
+RDebugUtils.currentLine=8323077;
+ //BA.debugLineNum = 8323077;BA.debugLine="userDetails = dbService.sql.ExecQuery($\"SELECT";
 __ref._userdetails /*anywheresoftware.b4j.objects.SQL.ResultSetWrapper*/  = __ref._dbservice /*b4j.example.databaseservice*/ ._sql /*anywheresoftware.b4j.objects.SQL*/ .ExecQuery(("SELECT * FROM users WHERE email='"+__c.SmartStringFormatter("",(Object)(_username))+"' AND password='"+__c.SmartStringFormatter("",(Object)(_password))+"'"));
-RDebugUtils.currentLine=2162694;
- //BA.debugLineNum = 2162694;BA.debugLine="If (userDetails.NextRow = True) Then";
+RDebugUtils.currentLine=8323078;
+ //BA.debugLineNum = 8323078;BA.debugLine="If (userDetails.NextRow = True) Then";
 if ((__ref._userdetails /*anywheresoftware.b4j.objects.SQL.ResultSetWrapper*/ .NextRow()==__c.True)) { 
-RDebugUtils.currentLine=2162695;
- //BA.debugLineNum = 2162695;BA.debugLine="userExist = True";
+RDebugUtils.currentLine=8323079;
+ //BA.debugLineNum = 8323079;BA.debugLine="userExist = True";
 _userexist = __c.True;
  };
  };
  } 
        catch (Exception e10) {
-			ba.setLastException(e10);RDebugUtils.currentLine=2162699;
- //BA.debugLineNum = 2162699;BA.debugLine="Main.log.write(LastException.Message)";
+			ba.setLastException(e10);RDebugUtils.currentLine=8323083;
+ //BA.debugLineNum = 8323083;BA.debugLine="Main.log.write(LastException.Message)";
 _main._log /*b4j.example.logger*/ ._write /*String*/ (null,__c.LastException(ba).getMessage());
-RDebugUtils.currentLine=2162700;
- //BA.debugLineNum = 2162700;BA.debugLine="xui.MsgboxAsync($\"Exception: ${LastException}\"$,";
+RDebugUtils.currentLine=8323084;
+ //BA.debugLineNum = 8323084;BA.debugLine="xui.MsgboxAsync($\"Exception: ${LastException}\"$,";
 __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .MsgboxAsync(ba,("Exception: "+__c.SmartStringFormatter("",(Object)(__c.LastException(ba).getObject()))+""),"Exception");
  };
-RDebugUtils.currentLine=2162702;
- //BA.debugLineNum = 2162702;BA.debugLine="dbService.Disconnect";
+RDebugUtils.currentLine=8323086;
+ //BA.debugLineNum = 8323086;BA.debugLine="dbService.Disconnect";
 __ref._dbservice /*b4j.example.databaseservice*/ ._disconnect /*String*/ (null);
-RDebugUtils.currentLine=2162704;
- //BA.debugLineNum = 2162704;BA.debugLine="Return userExist";
+RDebugUtils.currentLine=8323088;
+ //BA.debugLineNum = 8323088;BA.debugLine="Return userExist";
 if (true) return _userexist;
-RDebugUtils.currentLine=2162706;
- //BA.debugLineNum = 2162706;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8323090;
+ //BA.debugLineNum = 8323090;BA.debugLine="End Sub";
 return false;
 }
 public boolean  _logout(b4j.example.loginservice __ref) throws Exception{
@@ -109,68 +109,68 @@ RDebugUtils.currentModule="loginservice";
 if (Debug.shouldDelegate(ba, "logout", false))
 	 {return ((Boolean) Debug.delegate(ba, "logout", null));}
 boolean _session_active = false;
-RDebugUtils.currentLine=2228224;
- //BA.debugLineNum = 2228224;BA.debugLine="Public Sub Logout() As Boolean";
-RDebugUtils.currentLine=2228225;
- //BA.debugLineNum = 2228225;BA.debugLine="Dim session_active As Boolean = False";
+RDebugUtils.currentLine=8388608;
+ //BA.debugLineNum = 8388608;BA.debugLine="Public Sub Logout() As Boolean";
+RDebugUtils.currentLine=8388609;
+ //BA.debugLineNum = 8388609;BA.debugLine="Dim session_active As Boolean = False";
 _session_active = __c.False;
-RDebugUtils.currentLine=2228227;
- //BA.debugLineNum = 2228227;BA.debugLine="Try";
-try {RDebugUtils.currentLine=2228228;
- //BA.debugLineNum = 2228228;BA.debugLine="If (dbService.IsInitialized) Then";
+RDebugUtils.currentLine=8388611;
+ //BA.debugLineNum = 8388611;BA.debugLine="Try";
+try {RDebugUtils.currentLine=8388612;
+ //BA.debugLineNum = 8388612;BA.debugLine="If (dbService.IsInitialized) Then";
 if ((__ref._dbservice /*b4j.example.databaseservice*/ .IsInitialized /*boolean*/ ())) { 
-RDebugUtils.currentLine=2228229;
- //BA.debugLineNum = 2228229;BA.debugLine="dbService.Disconnect";
+RDebugUtils.currentLine=8388613;
+ //BA.debugLineNum = 8388613;BA.debugLine="dbService.Disconnect";
 __ref._dbservice /*b4j.example.databaseservice*/ ._disconnect /*String*/ (null);
-RDebugUtils.currentLine=2228230;
- //BA.debugLineNum = 2228230;BA.debugLine="session_active = False";
+RDebugUtils.currentLine=8388614;
+ //BA.debugLineNum = 8388614;BA.debugLine="session_active = False";
 _session_active = __c.False;
  }else {
-RDebugUtils.currentLine=2228232;
- //BA.debugLineNum = 2228232;BA.debugLine="session_active = True";
+RDebugUtils.currentLine=8388616;
+ //BA.debugLineNum = 8388616;BA.debugLine="session_active = True";
 _session_active = __c.True;
-RDebugUtils.currentLine=2228233;
- //BA.debugLineNum = 2228233;BA.debugLine="Main.log.write(\"Exception: System logout unsucc";
+RDebugUtils.currentLine=8388617;
+ //BA.debugLineNum = 8388617;BA.debugLine="Main.log.write(\"Exception: System logout unsucc";
 _main._log /*b4j.example.logger*/ ._write /*String*/ (null,"Exception: System logout unsuccessful"+__c.CRLF+"Please contact helpdesk");
-RDebugUtils.currentLine=2228234;
- //BA.debugLineNum = 2228234;BA.debugLine="xui.MsgboxAsync(\"Exception: System logout unsuc";
+RDebugUtils.currentLine=8388618;
+ //BA.debugLineNum = 8388618;BA.debugLine="xui.MsgboxAsync(\"Exception: System logout unsuc";
 __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .MsgboxAsync(ba,"Exception: System logout unsuccessful"+__c.CRLF+"Please contact helpdesk","Exception");
  };
  } 
        catch (Exception e12) {
-			ba.setLastException(e12);RDebugUtils.currentLine=2228237;
- //BA.debugLineNum = 2228237;BA.debugLine="Main.log.write(LastException.Message)";
+			ba.setLastException(e12);RDebugUtils.currentLine=8388621;
+ //BA.debugLineNum = 8388621;BA.debugLine="Main.log.write(LastException.Message)";
 _main._log /*b4j.example.logger*/ ._write /*String*/ (null,__c.LastException(ba).getMessage());
-RDebugUtils.currentLine=2228238;
- //BA.debugLineNum = 2228238;BA.debugLine="xui.MsgboxAsync(LastException.Message,\"Exception";
+RDebugUtils.currentLine=8388622;
+ //BA.debugLineNum = 8388622;BA.debugLine="xui.MsgboxAsync(LastException.Message,\"Exception";
 __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .MsgboxAsync(ba,__c.LastException(ba).getMessage(),"Exception");
  };
-RDebugUtils.currentLine=2228241;
- //BA.debugLineNum = 2228241;BA.debugLine="Return session_active";
+RDebugUtils.currentLine=8388625;
+ //BA.debugLineNum = 8388625;BA.debugLine="Return session_active";
 if (true) return _session_active;
-RDebugUtils.currentLine=2228242;
- //BA.debugLineNum = 2228242;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8388626;
+ //BA.debugLineNum = 8388626;BA.debugLine="End Sub";
 return false;
 }
 public String  _class_globals(b4j.example.loginservice __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="loginservice";
-RDebugUtils.currentLine=2031616;
- //BA.debugLineNum = 2031616;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=2031617;
- //BA.debugLineNum = 2031617;BA.debugLine="Private fx As JFX";
+RDebugUtils.currentLine=8192000;
+ //BA.debugLineNum = 8192000;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=8192001;
+ //BA.debugLineNum = 8192001;BA.debugLine="Private fx As JFX";
 _fx = new anywheresoftware.b4j.objects.JFX();
-RDebugUtils.currentLine=2031618;
- //BA.debugLineNum = 2031618;BA.debugLine="Private xui As XUI";
+RDebugUtils.currentLine=8192002;
+ //BA.debugLineNum = 8192002;BA.debugLine="Private xui As XUI";
 _xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
-RDebugUtils.currentLine=2031620;
- //BA.debugLineNum = 2031620;BA.debugLine="Private dbService As DatabaseService";
+RDebugUtils.currentLine=8192004;
+ //BA.debugLineNum = 8192004;BA.debugLine="Private dbService As DatabaseService";
 _dbservice = new b4j.example.databaseservice();
-RDebugUtils.currentLine=2031621;
- //BA.debugLineNum = 2031621;BA.debugLine="Public userDetails As JdbcResultSet";
+RDebugUtils.currentLine=8192005;
+ //BA.debugLineNum = 8192005;BA.debugLine="Public userDetails As JdbcResultSet";
 _userdetails = new anywheresoftware.b4j.objects.SQL.ResultSetWrapper();
-RDebugUtils.currentLine=2031622;
- //BA.debugLineNum = 2031622;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8192006;
+ //BA.debugLineNum = 8192006;BA.debugLine="End Sub";
 return "";
 }
 }

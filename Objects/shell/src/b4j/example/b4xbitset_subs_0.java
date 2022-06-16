@@ -17,14 +17,14 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _clear(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Clear (b4xbitset) ","b4xbitset",11,__ref.getField(false, "ba"),__ref,53);
+		Debug.PushSubsStack("Clear (b4xbitset) ","b4xbitset",11,__ref.getField(false, "ba"),__ref,54);
 if (RapidSub.canDelegate("clear")) { return __ref.runUserSub(false, "b4xbitset","clear", __ref);}
- BA.debugLineNum = 53;BA.debugLine="Public Sub Clear";
+ BA.debugLineNum = 54;BA.debugLine="Public Sub Clear";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 57;BA.debugLine="Dim data(Bit.ShiftRight(mSize, 5) + 1) As Int";
+ BA.debugLineNum = 58;BA.debugLine="Dim data(Bit.ShiftRight(mSize, 5) + 1) As Int";
 Debug.JustUpdateDeviceLine();
 b4xbitset._data = RemoteObject.createNewArray ("int", new int[] {RemoteObject.solve(new RemoteObject[] {b4xbitset.__c.getField(false,"Bit").runMethod(true,"ShiftRight",(Object)(__ref.getField(true,"_msize" /*RemoteObject*/ )),(Object)(BA.numberCast(int.class, 5))),RemoteObject.createImmutable(1)}, "+",1, 1).<Integer>get().intValue()}, new Object[]{});__ref.setField("_data",b4xbitset._data);
- BA.debugLineNum = 59;BA.debugLine="End Sub";
+ BA.debugLineNum = 60;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable("");
 }

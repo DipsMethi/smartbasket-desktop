@@ -10,20 +10,13 @@ public static RemoteObject  _append(RemoteObject __ref,RemoteObject _data) throw
 try {
 		Debug.PushSubsStack("Append (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,24);
 if (RapidSub.canDelegate("append")) { return __ref.runUserSub(false, "b4xbytesbuilder","append", __ref, _data);}
-RemoteObject _oldlength = RemoteObject.createImmutable(0);
 Debug.locals.put("Data", _data);
  BA.debugLineNum = 24;BA.debugLine="Public Sub Append(Data() As Byte) As B4XBytesBuild";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 25;BA.debugLine="Dim OldLength As Int = ChangeLength(mLength + Dat";
+ BA.debugLineNum = 25;BA.debugLine="Return Append2(Data, 0, Data.Length)";
 Debug.JustUpdateDeviceLine();
-_oldlength = __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_changelength" /*RemoteObject*/ ,(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_mlength" /*RemoteObject*/ ),_data.getField(true,"length")}, "+",1, 1)));Debug.locals.put("OldLength", _oldlength);Debug.locals.put("OldLength", _oldlength);
- BA.debugLineNum = 26;BA.debugLine="Bit.ArrayCopy(Data, 0, mBuffer, OldLength, Data.L";
-Debug.JustUpdateDeviceLine();
-b4xbytesbuilder.__c.getField(false,"Bit").runVoidMethod ("ArrayCopy",(Object)((_data)),(Object)(BA.numberCast(int.class, 0)),(Object)((__ref.getField(false,"_mbuffer" /*RemoteObject*/ ))),(Object)(_oldlength),(Object)(_data.getField(true,"length")));
- BA.debugLineNum = 27;BA.debugLine="Return Me";
-Debug.JustUpdateDeviceLine();
-if (true) return (__ref);
- BA.debugLineNum = 28;BA.debugLine="End Sub";
+if (true) return __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_append2" /*RemoteObject*/ ,(Object)(_data),(Object)(BA.numberCast(int.class, 0)),(Object)(_data.getField(true,"length")));
+ BA.debugLineNum = 26;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
 }
@@ -35,24 +28,24 @@ finally {
 		}}
 public static RemoteObject  _append2(RemoteObject __ref,RemoteObject _data,RemoteObject _startindex,RemoteObject _length) throws Exception{
 try {
-		Debug.PushSubsStack("Append2 (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,33);
+		Debug.PushSubsStack("Append2 (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,31);
 if (RapidSub.canDelegate("append2")) { return __ref.runUserSub(false, "b4xbytesbuilder","append2", __ref, _data, _startindex, _length);}
 RemoteObject _oldlength = RemoteObject.createImmutable(0);
 Debug.locals.put("Data", _data);
 Debug.locals.put("StartIndex", _startindex);
 Debug.locals.put("Length", _length);
- BA.debugLineNum = 33;BA.debugLine="Public Sub Append2(Data() As Byte, StartIndex As I";
+ BA.debugLineNum = 31;BA.debugLine="Public Sub Append2(Data() As Byte, StartIndex As I";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 34;BA.debugLine="Dim OldLength As Int = ChangeLength(mLength + Len";
+ BA.debugLineNum = 32;BA.debugLine="Dim OldLength As Int = ChangeLength(mLength + Len";
 Debug.JustUpdateDeviceLine();
 _oldlength = __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_changelength" /*RemoteObject*/ ,(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_mlength" /*RemoteObject*/ ),_length}, "+",1, 1)));Debug.locals.put("OldLength", _oldlength);Debug.locals.put("OldLength", _oldlength);
- BA.debugLineNum = 35;BA.debugLine="Bit.ArrayCopy(Data, StartIndex, mBuffer, OldLengt";
+ BA.debugLineNum = 33;BA.debugLine="Bit.ArrayCopy(Data, StartIndex, mBuffer, OldLengt";
 Debug.JustUpdateDeviceLine();
 b4xbytesbuilder.__c.getField(false,"Bit").runVoidMethod ("ArrayCopy",(Object)((_data)),(Object)(_startindex),(Object)((__ref.getField(false,"_mbuffer" /*RemoteObject*/ ))),(Object)(_oldlength),(Object)(_length));
- BA.debugLineNum = 36;BA.debugLine="Return Me";
+ BA.debugLineNum = 34;BA.debugLine="Return Me";
 Debug.JustUpdateDeviceLine();
 if (true) return (__ref);
- BA.debugLineNum = 37;BA.debugLine="End Sub";
+ BA.debugLineNum = 35;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
 }
@@ -114,14 +107,14 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _clear(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Clear (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,39);
+		Debug.PushSubsStack("Clear (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,37);
 if (RapidSub.canDelegate("clear")) { return __ref.runUserSub(false, "b4xbytesbuilder","clear", __ref);}
- BA.debugLineNum = 39;BA.debugLine="Public Sub Clear";
+ BA.debugLineNum = 37;BA.debugLine="Public Sub Clear";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 40;BA.debugLine="ChangeLength(0)";
+ BA.debugLineNum = 38;BA.debugLine="ChangeLength(0)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_changelength" /*RemoteObject*/ ,(Object)(BA.numberCast(int.class, 0)));
- BA.debugLineNum = 41;BA.debugLine="End Sub";
+ BA.debugLineNum = 39;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable("");
 }
@@ -131,16 +124,32 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
+public static RemoteObject  _getbuffer(RemoteObject __ref) throws Exception{
+try {
+		Debug.PushSubsStack("getBuffer (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,103);
+if (RapidSub.canDelegate("getbuffer")) { return __ref.runUserSub(false, "b4xbytesbuilder","getbuffer", __ref);}
+ BA.debugLineNum = 103;BA.debugLine="Private Sub getBuffer As Byte() 'ignore";
+Debug.JustUpdateDeviceLine();
+ BA.debugLineNum = 104;BA.debugLine="End Sub";
+Debug.JustUpdateDeviceLine();
+return RemoteObject.createImmutable(null);
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _getinternalbuffer(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("getInternalBuffer (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,104);
+		Debug.PushSubsStack("getInternalBuffer (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,127);
 if (RapidSub.canDelegate("getinternalbuffer")) { return __ref.runUserSub(false, "b4xbytesbuilder","getinternalbuffer", __ref);}
- BA.debugLineNum = 104;BA.debugLine="Public Sub getInternalBuffer As Byte()";
+ BA.debugLineNum = 127;BA.debugLine="Public Sub getInternalBuffer As Byte()";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 105;BA.debugLine="Return mBuffer";
+ BA.debugLineNum = 128;BA.debugLine="Return mBuffer";
 Debug.JustUpdateDeviceLine();
 if (true) return __ref.getField(false,"_mbuffer" /*RemoteObject*/ );
- BA.debugLineNum = 106;BA.debugLine="End Sub";
+ BA.debugLineNum = 129;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
 }
@@ -152,14 +161,14 @@ finally {
 		}}
 public static RemoteObject  _getlength(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("getLength (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,94);
+		Debug.PushSubsStack("getLength (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,92);
 if (RapidSub.canDelegate("getlength")) { return __ref.runUserSub(false, "b4xbytesbuilder","getlength", __ref);}
- BA.debugLineNum = 94;BA.debugLine="Public Sub getLength As Int";
+ BA.debugLineNum = 92;BA.debugLine="Public Sub getLength As Int";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 95;BA.debugLine="Return mLength";
+ BA.debugLineNum = 93;BA.debugLine="Return mLength";
 Debug.JustUpdateDeviceLine();
 if (true) return __ref.getField(true,"_mlength" /*RemoteObject*/ );
- BA.debugLineNum = 96;BA.debugLine="End Sub";
+ BA.debugLineNum = 94;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
 }
@@ -171,15 +180,15 @@ finally {
 		}}
 public static RemoteObject  _indexof(RemoteObject __ref,RemoteObject _searchfor) throws Exception{
 try {
-		Debug.PushSubsStack("IndexOf (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,109);
+		Debug.PushSubsStack("IndexOf (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,107);
 if (RapidSub.canDelegate("indexof")) { return __ref.runUserSub(false, "b4xbytesbuilder","indexof", __ref, _searchfor);}
 Debug.locals.put("SearchFor", _searchfor);
- BA.debugLineNum = 109;BA.debugLine="Public Sub IndexOf(SearchFor() As Byte) As Int";
+ BA.debugLineNum = 107;BA.debugLine="Public Sub IndexOf(SearchFor() As Byte) As Int";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 110;BA.debugLine="Return IndexOf2(SearchFor, 0)";
+ BA.debugLineNum = 108;BA.debugLine="Return IndexOf2(SearchFor, 0)";
 Debug.JustUpdateDeviceLine();
 if (true) return __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_indexof2" /*RemoteObject*/ ,(Object)(_searchfor),(Object)(BA.numberCast(int.class, 0)));
- BA.debugLineNum = 111;BA.debugLine="End Sub";
+ BA.debugLineNum = 109;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
 }
@@ -191,15 +200,15 @@ finally {
 		}}
 public static RemoteObject  _indexof2(RemoteObject __ref,RemoteObject _searchfor,RemoteObject _index) throws Exception{
 try {
-		Debug.PushSubsStack("IndexOf2 (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,114);
+		Debug.PushSubsStack("IndexOf2 (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,112);
 if (RapidSub.canDelegate("indexof2")) { return __ref.runUserSub(false, "b4xbytesbuilder","indexof2", __ref, _searchfor, _index);}
 int _i1 = 0;
 int _i2 = 0;
 Debug.locals.put("SearchFor", _searchfor);
 Debug.locals.put("Index", _index);
- BA.debugLineNum = 114;BA.debugLine="Public Sub IndexOf2(SearchFor() As Byte, Index As";
+ BA.debugLineNum = 112;BA.debugLine="Public Sub IndexOf2(SearchFor() As Byte, Index As";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 115;BA.debugLine="For i1 = Index To mLength - SearchFor.Length";
+ BA.debugLineNum = 113;BA.debugLine="For i1 = Index To mLength - SearchFor.Length";
 Debug.JustUpdateDeviceLine();
 {
 final int step1 = 1;
@@ -207,7 +216,7 @@ final int limit1 = RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_
 _i1 = _index.<Integer>get().intValue() ;
 for (;(step1 > 0 && _i1 <= limit1) || (step1 < 0 && _i1 >= limit1) ;_i1 = ((int)(0 + _i1 + step1))  ) {
 Debug.locals.put("i1", _i1);
- BA.debugLineNum = 116;BA.debugLine="For i2 = 0 To SearchFor.Length - 1";
+ BA.debugLineNum = 114;BA.debugLine="For i2 = 0 To SearchFor.Length - 1";
 Debug.JustUpdateDeviceLine();
 {
 final int step2 = 1;
@@ -215,30 +224,30 @@ final int limit2 = RemoteObject.solve(new RemoteObject[] {_searchfor.getField(tr
 _i2 = 0 ;
 for (;(step2 > 0 && _i2 <= limit2) || (step2 < 0 && _i2 >= limit2) ;_i2 = ((int)(0 + _i2 + step2))  ) {
 Debug.locals.put("i2", _i2);
- BA.debugLineNum = 117;BA.debugLine="If SearchFor(i2) <> mBuffer(i1 + i2) Then";
+ BA.debugLineNum = 115;BA.debugLine="If SearchFor(i2) <> mBuffer(i1 + i2) Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("!",_searchfor.getArrayElement(true,BA.numberCast(int.class, _i2)),BA.numberCast(double.class, __ref.getField(false,"_mbuffer" /*RemoteObject*/ ).getArrayElement(true,RemoteObject.solve(new RemoteObject[] {RemoteObject.createImmutable(_i1),RemoteObject.createImmutable(_i2)}, "+",1, 1))))) { 
- BA.debugLineNum = 118;BA.debugLine="Exit";
+ BA.debugLineNum = 116;BA.debugLine="Exit";
 Debug.JustUpdateDeviceLine();
 if (true) break;
  };
  }
 }Debug.locals.put("i2", _i2);
 ;
- BA.debugLineNum = 121;BA.debugLine="If i2 = SearchFor.Length Then";
+ BA.debugLineNum = 119;BA.debugLine="If i2 = SearchFor.Length Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",RemoteObject.createImmutable(_i2),BA.numberCast(double.class, _searchfor.getField(true,"length")))) { 
- BA.debugLineNum = 122;BA.debugLine="Return i1";
+ BA.debugLineNum = 120;BA.debugLine="Return i1";
 Debug.JustUpdateDeviceLine();
 if (true) return BA.numberCast(int.class, _i1);
  };
  }
 }Debug.locals.put("i1", _i1);
 ;
- BA.debugLineNum = 125;BA.debugLine="Return -1";
+ BA.debugLineNum = 123;BA.debugLine="Return -1";
 Debug.JustUpdateDeviceLine();
 if (true) return BA.numberCast(int.class, -(double) (0 + 1));
- BA.debugLineNum = 126;BA.debugLine="End Sub";
+ BA.debugLineNum = 124;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
 }
@@ -274,38 +283,38 @@ finally {
 		}}
 public static RemoteObject  _insert(RemoteObject __ref,RemoteObject _index,RemoteObject _data) throws Exception{
 try {
-		Debug.PushSubsStack("Insert (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,45);
+		Debug.PushSubsStack("Insert (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,43);
 if (RapidSub.canDelegate("insert")) { return __ref.runUserSub(false, "b4xbytesbuilder","insert", __ref, _index, _data);}
 RemoteObject _afterindex = null;
 Debug.locals.put("Index", _index);
 Debug.locals.put("Data", _data);
- BA.debugLineNum = 45;BA.debugLine="Public Sub Insert(Index As Int, Data() As Byte)";
+ BA.debugLineNum = 43;BA.debugLine="Public Sub Insert(Index As Int, Data() As Byte)";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 46;BA.debugLine="If Index >= mLength Then";
+ BA.debugLineNum = 44;BA.debugLine="If Index >= mLength Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("g",_index,BA.numberCast(double.class, __ref.getField(true,"_mlength" /*RemoteObject*/ )))) { 
- BA.debugLineNum = 47;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
+ BA.debugLineNum = 45;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(">",_index,BA.numberCast(double.class, __ref.getField(true,"_mlength" /*RemoteObject*/ )))) { 
-b4xbytesbuilder.__c.runVoidMethod ("LogImpl","95373954",RemoteObject.createImmutable("Index too large"),0);};
- BA.debugLineNum = 48;BA.debugLine="Append(Data)";
+b4xbytesbuilder.__c.runVoidMethod ("LogImpl","92883586",RemoteObject.createImmutable("Index too large"),0);};
+ BA.debugLineNum = 46;BA.debugLine="Append(Data)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_append" /*RemoteObject*/ ,(Object)(_data));
  }else {
- BA.debugLineNum = 50;BA.debugLine="Dim AfterIndex() As Byte = SubArray(Index)";
+ BA.debugLineNum = 48;BA.debugLine="Dim AfterIndex() As Byte = SubArray(Index)";
 Debug.JustUpdateDeviceLine();
 _afterindex = __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_subarray" /*RemoteObject*/ ,(Object)(_index));Debug.locals.put("AfterIndex", _afterindex);Debug.locals.put("AfterIndex", _afterindex);
- BA.debugLineNum = 51;BA.debugLine="ChangeLength(mLength + Data.Length)";
+ BA.debugLineNum = 49;BA.debugLine="ChangeLength(mLength + Data.Length)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_changelength" /*RemoteObject*/ ,(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_mlength" /*RemoteObject*/ ),_data.getField(true,"length")}, "+",1, 1)));
- BA.debugLineNum = 52;BA.debugLine="Bit.ArrayCopy(Data, 0, mBuffer, Index, Data.Leng";
+ BA.debugLineNum = 50;BA.debugLine="Bit.ArrayCopy(Data, 0, mBuffer, Index, Data.Leng";
 Debug.JustUpdateDeviceLine();
 b4xbytesbuilder.__c.getField(false,"Bit").runVoidMethod ("ArrayCopy",(Object)((_data)),(Object)(BA.numberCast(int.class, 0)),(Object)((__ref.getField(false,"_mbuffer" /*RemoteObject*/ ))),(Object)(_index),(Object)(_data.getField(true,"length")));
- BA.debugLineNum = 53;BA.debugLine="Bit.ArrayCopy(AfterIndex, 0, mBuffer, Index + Da";
+ BA.debugLineNum = 51;BA.debugLine="Bit.ArrayCopy(AfterIndex, 0, mBuffer, Index + Da";
 Debug.JustUpdateDeviceLine();
 b4xbytesbuilder.__c.getField(false,"Bit").runVoidMethod ("ArrayCopy",(Object)((_afterindex)),(Object)(BA.numberCast(int.class, 0)),(Object)((__ref.getField(false,"_mbuffer" /*RemoteObject*/ ))),(Object)(RemoteObject.solve(new RemoteObject[] {_index,_data.getField(true,"length")}, "+",1, 1)),(Object)(_afterindex.getField(true,"length")));
  };
- BA.debugLineNum = 55;BA.debugLine="End Sub";
+ BA.debugLineNum = 53;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable("");
 }
@@ -317,34 +326,34 @@ finally {
 		}}
 public static RemoteObject  _remove(RemoteObject __ref,RemoteObject _beginindex,RemoteObject _endindex) throws Exception{
 try {
-		Debug.PushSubsStack("Remove (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,71);
+		Debug.PushSubsStack("Remove (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,69);
 if (RapidSub.canDelegate("remove")) { return __ref.runUserSub(false, "b4xbytesbuilder","remove", __ref, _beginindex, _endindex);}
 RemoteObject _res = null;
 RemoteObject _afterendindex = null;
 Debug.locals.put("BeginIndex", _beginindex);
 Debug.locals.put("EndIndex", _endindex);
- BA.debugLineNum = 71;BA.debugLine="Public Sub Remove(BeginIndex As Int, EndIndex As I";
+ BA.debugLineNum = 69;BA.debugLine="Public Sub Remove(BeginIndex As Int, EndIndex As I";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 72;BA.debugLine="Dim res() As Byte = SubArray2(BeginIndex, EndInde";
+ BA.debugLineNum = 70;BA.debugLine="Dim res() As Byte = SubArray2(BeginIndex, EndInde";
 Debug.JustUpdateDeviceLine();
 _res = __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_subarray2" /*RemoteObject*/ ,(Object)(_beginindex),(Object)(_endindex));Debug.locals.put("res", _res);Debug.locals.put("res", _res);
- BA.debugLineNum = 73;BA.debugLine="If EndIndex <= mLength Then";
+ BA.debugLineNum = 71;BA.debugLine="If EndIndex <= mLength Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("k",_endindex,BA.numberCast(double.class, __ref.getField(true,"_mlength" /*RemoteObject*/ )))) { 
- BA.debugLineNum = 74;BA.debugLine="Dim AfterEndIndex() As Byte = SubArray(EndIndex)";
+ BA.debugLineNum = 72;BA.debugLine="Dim AfterEndIndex() As Byte = SubArray(EndIndex)";
 Debug.JustUpdateDeviceLine();
 _afterendindex = __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_subarray" /*RemoteObject*/ ,(Object)(_endindex));Debug.locals.put("AfterEndIndex", _afterendindex);Debug.locals.put("AfterEndIndex", _afterendindex);
- BA.debugLineNum = 75;BA.debugLine="Bit.ArrayCopy(AfterEndIndex, 0, mBuffer, BeginIn";
+ BA.debugLineNum = 73;BA.debugLine="Bit.ArrayCopy(AfterEndIndex, 0, mBuffer, BeginIn";
 Debug.JustUpdateDeviceLine();
 b4xbytesbuilder.__c.getField(false,"Bit").runVoidMethod ("ArrayCopy",(Object)((_afterendindex)),(Object)(BA.numberCast(int.class, 0)),(Object)((__ref.getField(false,"_mbuffer" /*RemoteObject*/ ))),(Object)(_beginindex),(Object)(_afterendindex.getField(true,"length")));
  };
- BA.debugLineNum = 77;BA.debugLine="ChangeLength(mLength - (EndIndex - BeginIndex))";
+ BA.debugLineNum = 75;BA.debugLine="ChangeLength(mLength - (EndIndex - BeginIndex))";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_changelength" /*RemoteObject*/ ,(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_mlength" /*RemoteObject*/ ),(RemoteObject.solve(new RemoteObject[] {_endindex,_beginindex}, "-",1, 1))}, "-",1, 1)));
- BA.debugLineNum = 78;BA.debugLine="Return res";
+ BA.debugLineNum = 76;BA.debugLine="Return res";
 Debug.JustUpdateDeviceLine();
 if (true) return _res;
- BA.debugLineNum = 79;BA.debugLine="End Sub";
+ BA.debugLineNum = 77;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
 }
@@ -356,35 +365,35 @@ finally {
 		}}
 public static RemoteObject  _set(RemoteObject __ref,RemoteObject _index,RemoteObject _data) throws Exception{
 try {
-		Debug.PushSubsStack("Set (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,58);
+		Debug.PushSubsStack("Set (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,56);
 if (RapidSub.canDelegate("set")) { return __ref.runUserSub(false, "b4xbytesbuilder","set", __ref, _index, _data);}
 Debug.locals.put("Index", _index);
 Debug.locals.put("Data", _data);
- BA.debugLineNum = 58;BA.debugLine="Public Sub Set(Index As Int, Data() As Byte)";
+ BA.debugLineNum = 56;BA.debugLine="Public Sub Set(Index As Int, Data() As Byte)";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 59;BA.debugLine="If Index >= mLength Then";
+ BA.debugLineNum = 57;BA.debugLine="If Index >= mLength Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("g",_index,BA.numberCast(double.class, __ref.getField(true,"_mlength" /*RemoteObject*/ )))) { 
- BA.debugLineNum = 60;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
+ BA.debugLineNum = 58;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(">",_index,BA.numberCast(double.class, __ref.getField(true,"_mlength" /*RemoteObject*/ )))) { 
-b4xbytesbuilder.__c.runVoidMethod ("LogImpl","95439490",RemoteObject.createImmutable("Index too large"),0);};
- BA.debugLineNum = 61;BA.debugLine="Append(Data)";
+b4xbytesbuilder.__c.runVoidMethod ("LogImpl","92949122",RemoteObject.createImmutable("Index too large"),0);};
+ BA.debugLineNum = 59;BA.debugLine="Append(Data)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_append" /*RemoteObject*/ ,(Object)(_data));
  }else {
- BA.debugLineNum = 63;BA.debugLine="If Data.Length + Index > mLength Then";
+ BA.debugLineNum = 61;BA.debugLine="If Data.Length + Index > mLength Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(">",RemoteObject.solve(new RemoteObject[] {_data.getField(true,"length"),_index}, "+",1, 1),BA.numberCast(double.class, __ref.getField(true,"_mlength" /*RemoteObject*/ )))) { 
- BA.debugLineNum = 64;BA.debugLine="ChangeLength(Data.Length + Index)";
+ BA.debugLineNum = 62;BA.debugLine="ChangeLength(Data.Length + Index)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_changelength" /*RemoteObject*/ ,(Object)(RemoteObject.solve(new RemoteObject[] {_data.getField(true,"length"),_index}, "+",1, 1)));
  };
- BA.debugLineNum = 66;BA.debugLine="Bit.ArrayCopy(Data, 0, mBuffer, Index, Data.Leng";
+ BA.debugLineNum = 64;BA.debugLine="Bit.ArrayCopy(Data, 0, mBuffer, Index, Data.Leng";
 Debug.JustUpdateDeviceLine();
 b4xbytesbuilder.__c.getField(false,"Bit").runVoidMethod ("ArrayCopy",(Object)((_data)),(Object)(BA.numberCast(int.class, 0)),(Object)((__ref.getField(false,"_mbuffer" /*RemoteObject*/ ))),(Object)(_index),(Object)(_data.getField(true,"length")));
  };
- BA.debugLineNum = 68;BA.debugLine="End Sub";
+ BA.debugLineNum = 66;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable("");
 }
@@ -396,15 +405,15 @@ finally {
 		}}
 public static RemoteObject  _subarray(RemoteObject __ref,RemoteObject _beginindex) throws Exception{
 try {
-		Debug.PushSubsStack("SubArray (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,82);
+		Debug.PushSubsStack("SubArray (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,80);
 if (RapidSub.canDelegate("subarray")) { return __ref.runUserSub(false, "b4xbytesbuilder","subarray", __ref, _beginindex);}
 Debug.locals.put("BeginIndex", _beginindex);
- BA.debugLineNum = 82;BA.debugLine="Public Sub SubArray(BeginIndex As Int) As Byte()";
+ BA.debugLineNum = 80;BA.debugLine="Public Sub SubArray(BeginIndex As Int) As Byte()";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 83;BA.debugLine="Return SubArray2(BeginIndex, mLength)";
+ BA.debugLineNum = 81;BA.debugLine="Return SubArray2(BeginIndex, mLength)";
 Debug.JustUpdateDeviceLine();
 if (true) return __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_subarray2" /*RemoteObject*/ ,(Object)(_beginindex),(Object)(__ref.getField(true,"_mlength" /*RemoteObject*/ )));
- BA.debugLineNum = 84;BA.debugLine="End Sub";
+ BA.debugLineNum = 82;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
 }
@@ -416,23 +425,23 @@ finally {
 		}}
 public static RemoteObject  _subarray2(RemoteObject __ref,RemoteObject _beginindex,RemoteObject _endindex) throws Exception{
 try {
-		Debug.PushSubsStack("SubArray2 (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,88);
+		Debug.PushSubsStack("SubArray2 (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,86);
 if (RapidSub.canDelegate("subarray2")) { return __ref.runUserSub(false, "b4xbytesbuilder","subarray2", __ref, _beginindex, _endindex);}
 RemoteObject _b = null;
 Debug.locals.put("BeginIndex", _beginindex);
 Debug.locals.put("EndIndex", _endindex);
- BA.debugLineNum = 88;BA.debugLine="Public Sub SubArray2(BeginIndex As Int, EndIndex A";
+ BA.debugLineNum = 86;BA.debugLine="Public Sub SubArray2(BeginIndex As Int, EndIndex A";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 89;BA.debugLine="Dim b(EndIndex - BeginIndex) As Byte";
+ BA.debugLineNum = 87;BA.debugLine="Dim b(EndIndex - BeginIndex) As Byte";
 Debug.JustUpdateDeviceLine();
 _b = RemoteObject.createNewArray ("byte", new int[] {RemoteObject.solve(new RemoteObject[] {_endindex,_beginindex}, "-",1, 1).<Integer>get().intValue()}, new Object[]{});Debug.locals.put("b", _b);
- BA.debugLineNum = 90;BA.debugLine="Bit.ArrayCopy(mBuffer, BeginIndex, b, 0, b.Length";
+ BA.debugLineNum = 88;BA.debugLine="Bit.ArrayCopy(mBuffer, BeginIndex, b, 0, b.Length";
 Debug.JustUpdateDeviceLine();
 b4xbytesbuilder.__c.getField(false,"Bit").runVoidMethod ("ArrayCopy",(Object)((__ref.getField(false,"_mbuffer" /*RemoteObject*/ ))),(Object)(_beginindex),(Object)((_b)),(Object)(BA.numberCast(int.class, 0)),(Object)(_b.getField(true,"length")));
- BA.debugLineNum = 91;BA.debugLine="Return b";
+ BA.debugLineNum = 89;BA.debugLine="Return b";
 Debug.JustUpdateDeviceLine();
 if (true) return _b;
- BA.debugLineNum = 92;BA.debugLine="End Sub";
+ BA.debugLineNum = 90;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
 }
@@ -444,14 +453,14 @@ finally {
 		}}
 public static RemoteObject  _toarray(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("ToArray (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,99);
+		Debug.PushSubsStack("ToArray (b4xbytesbuilder) ","b4xbytesbuilder",12,__ref.getField(false, "ba"),__ref,97);
 if (RapidSub.canDelegate("toarray")) { return __ref.runUserSub(false, "b4xbytesbuilder","toarray", __ref);}
- BA.debugLineNum = 99;BA.debugLine="Public Sub ToArray() As Byte()";
+ BA.debugLineNum = 97;BA.debugLine="Public Sub ToArray() As Byte()";
 Debug.JustUpdateDeviceLine();
- BA.debugLineNum = 100;BA.debugLine="Return SubArray(0)";
+ BA.debugLineNum = 98;BA.debugLine="Return SubArray(0)";
 Debug.JustUpdateDeviceLine();
 if (true) return __ref.runClassMethod (b4j.example.b4xbytesbuilder.class, "_subarray" /*RemoteObject*/ ,(Object)(BA.numberCast(int.class, 0)));
- BA.debugLineNum = 101;BA.debugLine="End Sub";
+ BA.debugLineNum = 99;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
 }

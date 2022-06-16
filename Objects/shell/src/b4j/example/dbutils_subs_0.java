@@ -8,7 +8,7 @@ public class dbutils_subs_0 {
 
 public static RemoteObject  _copydbfromassets(RemoteObject _filename,RemoteObject _appname) throws Exception{
 try {
-		Debug.PushSubsStack("CopyDBFromAssets (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,29);
+		Debug.PushSubsStack("CopyDBFromAssets (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,29);
 if (RapidSub.canDelegate("copydbfromassets")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","copydbfromassets", _filename, _appname);}
 RemoteObject _targetdir = RemoteObject.createImmutable("");
 Debug.locals.put("FileName", _filename);
@@ -40,7 +40,7 @@ finally {
 		}}
 public static RemoteObject  _createtable(RemoteObject _sql,RemoteObject _tablename,RemoteObject _fieldsandtypes,RemoteObject _primarykey) throws Exception{
 try {
-		Debug.PushSubsStack("CreateTable (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,96);
+		Debug.PushSubsStack("CreateTable (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,96);
 if (RapidSub.canDelegate("createtable")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","createtable", _sql, _tablename, _fieldsandtypes, _primarykey);}
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 int _i = 0;
@@ -102,7 +102,7 @@ Debug.JustUpdateDeviceLine();
 _query = RemoteObject.concat(RemoteObject.createImmutable("CREATE TABLE IF NOT EXISTS "),_escapefield(_tablename),RemoteObject.createImmutable(" "),_sb.runMethod(true,"ToString"));Debug.locals.put("query", _query);Debug.locals.put("query", _query);
  BA.debugLineNum = 111;BA.debugLine="Log(\"CreateTable: \" & query)";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98060943",RemoteObject.concat(RemoteObject.createImmutable("CreateTable: "),_query),0);
+dbutils.__c.runVoidMethod ("LogImpl","97012367",RemoteObject.concat(RemoteObject.createImmutable("CreateTable: "),_query),0);
  BA.debugLineNum = 113;BA.debugLine="SQL.ExecNonQuery(query)";
 Debug.JustUpdateDeviceLine();
 _sql.runVoidMethod ("ExecNonQuery",(Object)(_query));
@@ -118,7 +118,7 @@ finally {
 		}}
 public static RemoteObject  _deleterecord(RemoteObject _sql,RemoteObject _tablename,RemoteObject _wherefieldequals) throws Exception{
 try {
-		Debug.PushSubsStack("DeleteRecord (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,492);
+		Debug.PushSubsStack("DeleteRecord (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,492);
 if (RapidSub.canDelegate("deleterecord")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","deleterecord", _sql, _tablename, _wherefieldequals);}
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 RemoteObject _args = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -142,7 +142,7 @@ Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_wherefieldequals.runMethod(true,"getSize"),BA.numberCast(double.class, 0))) { 
  BA.debugLineNum = 497;BA.debugLine="Log(\"WhereFieldEquals map empty!\")";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98978437",RemoteObject.createImmutable("WhereFieldEquals map empty!"),0);
+dbutils.__c.runVoidMethod ("LogImpl","97929861",RemoteObject.createImmutable("WhereFieldEquals map empty!"),0);
  BA.debugLineNum = 498;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
 if (true) return RemoteObject.createImmutable("");
@@ -178,7 +178,7 @@ _args.runVoidMethod ("Add",(Object)(_wherefieldequals.runMethod(false,"Get",(Obj
 ;
  BA.debugLineNum = 508;BA.debugLine="Log(\"DeleteRecord: \" & sb.ToString)";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98978448",RemoteObject.concat(RemoteObject.createImmutable("DeleteRecord: "),_sb.runMethod(true,"ToString")),0);
+dbutils.__c.runVoidMethod ("LogImpl","97929872",RemoteObject.concat(RemoteObject.createImmutable("DeleteRecord: "),_sb.runMethod(true,"ToString")),0);
  BA.debugLineNum = 510;BA.debugLine="SQL.ExecNonQuery2(sb.ToString, args)";
 Debug.JustUpdateDeviceLine();
 _sql.runVoidMethod ("ExecNonQuery2",(Object)(_sb.runMethod(true,"ToString")),(Object)(_args));
@@ -194,7 +194,7 @@ finally {
 		}}
 public static RemoteObject  _droptable(RemoteObject _sql,RemoteObject _tablename) throws Exception{
 try {
-		Debug.PushSubsStack("DropTable (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,118);
+		Debug.PushSubsStack("DropTable (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,118);
 if (RapidSub.canDelegate("droptable")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","droptable", _sql, _tablename);}
 RemoteObject _query = RemoteObject.createImmutable("");
 Debug.locals.put("SQL", _sql);
@@ -206,7 +206,7 @@ Debug.JustUpdateDeviceLine();
 _query = RemoteObject.concat(RemoteObject.createImmutable("DROP TABLE IF EXISTS"),_escapefield(_tablename));Debug.locals.put("query", _query);Debug.locals.put("query", _query);
  BA.debugLineNum = 121;BA.debugLine="Log(\"DropTable: \" & query)";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98126467",RemoteObject.concat(RemoteObject.createImmutable("DropTable: "),_query),0);
+dbutils.__c.runVoidMethod ("LogImpl","97077891",RemoteObject.concat(RemoteObject.createImmutable("DropTable: "),_query),0);
  BA.debugLineNum = 123;BA.debugLine="SQL.ExecNonQuery(query)";
 Debug.JustUpdateDeviceLine();
 _sql.runVoidMethod ("ExecNonQuery",(Object)(_query));
@@ -222,7 +222,7 @@ finally {
 		}}
 public static RemoteObject  _escapefield(RemoteObject _f) throws Exception{
 try {
-		Debug.PushSubsStack("EscapeField (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,65);
+		Debug.PushSubsStack("EscapeField (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,65);
 if (RapidSub.canDelegate("escapefield")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","escapefield", _f);}
 Debug.locals.put("f", _f);
  BA.debugLineNum = 65;BA.debugLine="Private Sub EscapeField(f As String) As String";
@@ -242,7 +242,7 @@ finally {
 		}}
 public static RemoteObject  _executehtml(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit,RemoteObject _clickable) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteHtml (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,365);
+		Debug.PushSubsStack("ExecuteHtml (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,365);
 if (RapidSub.canDelegate("executehtml")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executehtml", _sql, _query, _stringargs, _limit, _clickable);}
 RemoteObject _cur = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
@@ -271,7 +271,7 @@ _cur = _sql.runMethod(false,"ExecQuery",(Object)(_query));Debug.locals.put("cur"
  };
  BA.debugLineNum = 373;BA.debugLine="Log(\"ExecuteHtml: \" & Query)";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98650760",RemoteObject.concat(RemoteObject.createImmutable("ExecuteHtml: "),_query),0);
+dbutils.__c.runVoidMethod ("LogImpl","97602184",RemoteObject.concat(RemoteObject.createImmutable("ExecuteHtml: "),_query),0);
  BA.debugLineNum = 376;BA.debugLine="Dim sb As StringBuilder";
 Debug.JustUpdateDeviceLine();
 _sb = RemoteObject.createNew ("anywheresoftware.b4a.keywords.StringBuilderWrapper");Debug.locals.put("sb", _sb);
@@ -387,7 +387,7 @@ finally {
 		}}
 public static RemoteObject  _executejson(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit,RemoteObject _dbtypes) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteJSON (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,325);
+		Debug.PushSubsStack("ExecuteJSON (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,325);
 if (RapidSub.canDelegate("executejson")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executejson", _sql, _query, _stringargs, _limit, _dbtypes);}
 RemoteObject _table = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _cur = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
@@ -420,7 +420,7 @@ _cur = _sql.runMethod(false,"ExecQuery",(Object)(_query));Debug.locals.put("cur"
  };
  BA.debugLineNum = 334;BA.debugLine="Log(\"ExecuteJSON: \" & Query)";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98585225",RemoteObject.concat(RemoteObject.createImmutable("ExecuteJSON: "),_query),0);
+dbutils.__c.runVoidMethod ("LogImpl","97536649",RemoteObject.concat(RemoteObject.createImmutable("ExecuteJSON: "),_query),0);
  BA.debugLineNum = 336;BA.debugLine="Dim table As List";
 Debug.JustUpdateDeviceLine();
 _table = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("table", _table);
@@ -465,7 +465,7 @@ _m.runVoidMethod ("Put",(Object)((_cur.runMethod(true,"GetColumnName",(Object)(B
 default: {
  BA.debugLineNum = 350;BA.debugLine="Log(\"Invalid type: \" & DBTypes.Get(i))";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98585241",RemoteObject.concat(RemoteObject.createImmutable("Invalid type: "),_dbtypes.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i)))),0);
+dbutils.__c.runVoidMethod ("LogImpl","97536665",RemoteObject.concat(RemoteObject.createImmutable("Invalid type: "),_dbtypes.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i)))),0);
  break; }
 }
 ;
@@ -508,7 +508,7 @@ finally {
 		}}
 public static RemoteObject  _executelist(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteList (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,305);
+		Debug.PushSubsStack("ExecuteList (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,305);
 if (RapidSub.canDelegate("executelist")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executelist", _sql, _query, _stringargs, _limit);}
 RemoteObject _table = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _res = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -560,7 +560,7 @@ finally {
 		}}
 public static RemoteObject  _executelist2(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit,RemoteObject _list) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteList2 (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,300);
+		Debug.PushSubsStack("ExecuteList2 (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,300);
 if (RapidSub.canDelegate("executelist2")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executelist2", _sql, _query, _stringargs, _limit, _list);}
 Debug.locals.put("SQL", _sql);
 Debug.locals.put("Query", _query);
@@ -587,7 +587,7 @@ finally {
 		}}
 public static RemoteObject  _executemap(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteMap (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,213);
+		Debug.PushSubsStack("ExecuteMap (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,213);
 if (RapidSub.canDelegate("executemap")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executemap", _sql, _query, _stringargs);}
 RemoteObject _res = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _cur = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
@@ -616,13 +616,13 @@ _cur = _sql.runMethod(false,"ExecQuery",(Object)(_query));Debug.locals.put("cur"
  };
  BA.debugLineNum = 222;BA.debugLine="Log(\"ExecuteMap: \" & Query)";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98323081",RemoteObject.concat(RemoteObject.createImmutable("ExecuteMap: "),_query),0);
+dbutils.__c.runVoidMethod ("LogImpl","97274505",RemoteObject.concat(RemoteObject.createImmutable("ExecuteMap: "),_query),0);
  BA.debugLineNum = 224;BA.debugLine="If cur.NextRow = False Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_cur.runMethod(true,"NextRow"),dbutils.__c.getField(true,"False"))) { 
  BA.debugLineNum = 226;BA.debugLine="Log(\"No records found.\")";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98323085",RemoteObject.createImmutable("No records found."),0);
+dbutils.__c.runVoidMethod ("LogImpl","97274509",RemoteObject.createImmutable("No records found."),0);
  BA.debugLineNum = 228;BA.debugLine="Return res";
 Debug.JustUpdateDeviceLine();
 if (true) return _res;
@@ -662,7 +662,7 @@ finally {
 		}}
 public static RemoteObject  _executememorytable(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteMemoryTable (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,186);
+		Debug.PushSubsStack("ExecuteMemoryTable (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,186);
 if (RapidSub.canDelegate("executememorytable")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executememorytable", _sql, _query, _stringargs, _limit);}
 RemoteObject _cur = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 RemoteObject _table = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -688,7 +688,7 @@ Debug.JustUpdateDeviceLine();
 _cur = _sql.runMethod(false,"ExecQuery2",(Object)(_query),(Object)(dbutils.__c.runMethod(false, "ArrayToList", (Object)(_stringargs))));Debug.locals.put("cur", _cur);
  BA.debugLineNum = 193;BA.debugLine="Log(\"ExecuteMemoryTable: \" & Query)";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98257543",RemoteObject.concat(RemoteObject.createImmutable("ExecuteMemoryTable: "),_query),0);
+dbutils.__c.runVoidMethod ("LogImpl","97208967",RemoteObject.concat(RemoteObject.createImmutable("ExecuteMemoryTable: "),_query),0);
  BA.debugLineNum = 195;BA.debugLine="Dim table As List";
 Debug.JustUpdateDeviceLine();
 _table = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("table", _table);
@@ -742,7 +742,7 @@ finally {
 		}}
 public static RemoteObject  _executetableview(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit,RemoteObject _tableview1) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteTableView (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,273);
+		Debug.PushSubsStack("ExecuteTableView (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,273);
 if (RapidSub.canDelegate("executetableview")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executetableview", _sql, _query, _stringargs, _limit, _tableview1);}
 RemoteObject _cur = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 RemoteObject _cols = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -838,7 +838,7 @@ finally {
 		}}
 public static RemoteObject  _getdbfolder(RemoteObject _appname) throws Exception{
 try {
-		Debug.PushSubsStack("GetDBFolder (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,21);
+		Debug.PushSubsStack("GetDBFolder (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,21);
 if (RapidSub.canDelegate("getdbfolder")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","getdbfolder", _appname);}
 Debug.locals.put("AppName", _appname);
  BA.debugLineNum = 21;BA.debugLine="Public Sub GetDBFolder (AppName As String) As Stri";
@@ -858,7 +858,7 @@ finally {
 		}}
 public static RemoteObject  _getdbversion(RemoteObject _sql) throws Exception{
 try {
-		Debug.PushSubsStack("GetDBVersion (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,423);
+		Debug.PushSubsStack("GetDBVersion (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,423);
 if (RapidSub.canDelegate("getdbversion")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","getdbversion", _sql);}
 RemoteObject _version = RemoteObject.createImmutable(0);
 RemoteObject _m = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
@@ -904,7 +904,7 @@ finally {
 		}}
 public static RemoteObject  _getfieldsinfo(RemoteObject _db,RemoteObject _tablename) throws Exception{
 try {
-		Debug.PushSubsStack("GetFieldsInfo (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,526);
+		Debug.PushSubsStack("GetFieldsInfo (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,526);
 if (RapidSub.canDelegate("getfieldsinfo")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","getfieldsinfo", _db, _tablename);}
 RemoteObject _lstfieldsinfo = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _fieldslist = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -973,7 +973,7 @@ finally {
 		}}
 public static RemoteObject  _gettables(RemoteObject _db) throws Exception{
 try {
-		Debug.PushSubsStack("GetTables (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,520);
+		Debug.PushSubsStack("GetTables (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,520);
 if (RapidSub.canDelegate("gettables")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","gettables", _db);}
 Debug.locals.put("DB", _db);
  BA.debugLineNum = 520;BA.debugLine="Public Sub GetTables(DB As SQL) As List";
@@ -993,7 +993,7 @@ finally {
 		}}
 public static RemoteObject  _insertmaps(RemoteObject _sql,RemoteObject _tablename,RemoteObject _listofmaps) throws Exception{
 try {
-		Debug.PushSubsStack("InsertMaps (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,131);
+		Debug.PushSubsStack("InsertMaps (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,131);
 if (RapidSub.canDelegate("insertmaps")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","insertmaps", _sql, _tablename, _listofmaps);}
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 RemoteObject _columns = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
@@ -1022,7 +1022,7 @@ Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(">",_listofmaps.runMethod(true,"getSize"),BA.numberCast(double.class, 1)) && RemoteObject.solveBoolean("=",_listofmaps.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 0))),_listofmaps.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 1))))) { 
  BA.debugLineNum = 136;BA.debugLine="Log(\"Same Map found twice in list. Each item in";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98192005",RemoteObject.createImmutable("Same Map found twice in list. Each item in the list should include a different map object."),0);
+dbutils.__c.runVoidMethod ("LogImpl","97143429",RemoteObject.createImmutable("Same Map found twice in list. Each item in the list should include a different map object."),0);
  BA.debugLineNum = 137;BA.debugLine="Return res";
 Debug.JustUpdateDeviceLine();
 if (true) return _res;
@@ -1103,7 +1103,7 @@ _sb.runMethod(false,"Append",(Object)(_columns.runMethod(true,"ToString"))).runM
  BA.debugLineNum = 161;BA.debugLine="If i1 = 0 Then Log(\"InsertMaps (first query out";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",RemoteObject.createImmutable(_i1),BA.numberCast(double.class, 0))) { 
-dbutils.__c.runVoidMethod ("LogImpl","98192030",RemoteObject.concat(RemoteObject.createImmutable("InsertMaps (first query out of "),_listofmaps.runMethod(true,"getSize"),RemoteObject.createImmutable("): "),_sb.runMethod(true,"ToString")),0);};
+dbutils.__c.runVoidMethod ("LogImpl","97143454",RemoteObject.concat(RemoteObject.createImmutable("InsertMaps (first query out of "),_listofmaps.runMethod(true,"getSize"),RemoteObject.createImmutable("): "),_sb.runMethod(true,"ToString")),0);};
  BA.debugLineNum = 163;BA.debugLine="SQL.ExecNonQuery2(sb.ToString, listOfValues)";
 Debug.JustUpdateDeviceLine();
 _sql.runVoidMethod ("ExecNonQuery2",(Object)(_sb.runMethod(true,"ToString")),(Object)(_listofvalues));
@@ -1121,7 +1121,7 @@ _res = dbutils.__c.getField(true,"True");Debug.locals.put("res", _res);
        catch (Exception e34) {
 			BA.rdebugUtils.runVoidMethod("setLastException",dbutils.ba, e34.toString()); BA.debugLineNum = 168;BA.debugLine="Log(LastException)";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98192037",BA.ObjectToString(dbutils.__c.runMethod(false,"LastException",dbutils.ba)),0);
+dbutils.__c.runVoidMethod ("LogImpl","97143461",BA.ObjectToString(dbutils.__c.runMethod(false,"LastException",dbutils.ba)),0);
  BA.debugLineNum = 170;BA.debugLine="SQL.Rollback";
 Debug.JustUpdateDeviceLine();
 _sql.runVoidMethod ("Rollback");
@@ -1163,7 +1163,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _setdbversion(RemoteObject _sql,RemoteObject _version) throws Exception{
 try {
-		Debug.PushSubsStack("SetDBVersion (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,444);
+		Debug.PushSubsStack("SetDBVersion (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,444);
 if (RapidSub.canDelegate("setdbversion")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","setdbversion", _sql, _version);}
 Debug.locals.put("SQL", _sql);
 Debug.locals.put("Version", _version);
@@ -1184,7 +1184,7 @@ finally {
 		}}
 public static RemoteObject  _tableexists(RemoteObject _sql,RemoteObject _tablename) throws Exception{
 try {
-		Debug.PushSubsStack("TableExists (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,514);
+		Debug.PushSubsStack("TableExists (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,514);
 if (RapidSub.canDelegate("tableexists")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","tableexists", _sql, _tablename);}
 RemoteObject _count = RemoteObject.createImmutable(0);
 Debug.locals.put("SQL", _sql);
@@ -1209,7 +1209,7 @@ finally {
 		}}
 public static RemoteObject  _updaterecord(RemoteObject _sql,RemoteObject _tablename,RemoteObject _field,RemoteObject _newvalue,RemoteObject _wherefieldequals) throws Exception{
 try {
-		Debug.PushSubsStack("UpdateRecord (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,450);
+		Debug.PushSubsStack("UpdateRecord (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,450);
 if (RapidSub.canDelegate("updaterecord")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","updaterecord", _sql, _tablename, _field, _newvalue, _wherefieldequals);}
 Debug.locals.put("SQL", _sql);
 Debug.locals.put("TableName", _tablename);
@@ -1233,7 +1233,7 @@ finally {
 		}}
 public static RemoteObject  _updaterecord2(RemoteObject _sql,RemoteObject _tablename,RemoteObject _fields,RemoteObject _wherefieldequals) throws Exception{
 try {
-		Debug.PushSubsStack("UpdateRecord2 (dbutils) ","dbutils",16,dbutils.ba,dbutils.mostCurrent,457);
+		Debug.PushSubsStack("UpdateRecord2 (dbutils) ","dbutils",18,dbutils.ba,dbutils.mostCurrent,457);
 if (RapidSub.canDelegate("updaterecord2")) { return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","updaterecord2", _sql, _tablename, _fields, _wherefieldequals);}
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 RemoteObject _args = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -1249,7 +1249,7 @@ Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_wherefieldequals.runMethod(true,"getSize"),BA.numberCast(double.class, 0))) { 
  BA.debugLineNum = 459;BA.debugLine="Log(\"WhereFieldEquals map empty!\")";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98912898",RemoteObject.createImmutable("WhereFieldEquals map empty!"),0);
+dbutils.__c.runVoidMethod ("LogImpl","97864322",RemoteObject.createImmutable("WhereFieldEquals map empty!"),0);
  BA.debugLineNum = 460;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
 if (true) return RemoteObject.createImmutable("");
@@ -1259,7 +1259,7 @@ Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_fields.runMethod(true,"getSize"),BA.numberCast(double.class, 0))) { 
  BA.debugLineNum = 463;BA.debugLine="Log(\"Fields empty\")";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98912902",RemoteObject.createImmutable("Fields empty"),0);
+dbutils.__c.runVoidMethod ("LogImpl","97864326",RemoteObject.createImmutable("Fields empty"),0);
  BA.debugLineNum = 464;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
 if (true) return RemoteObject.createImmutable("");
@@ -1334,7 +1334,7 @@ Debug.JustUpdateDeviceLine();
 _sb.runVoidMethod ("Remove",(Object)(RemoteObject.solve(new RemoteObject[] {_sb.runMethod(true,"getLength"),RemoteObject.createImmutable(" AND ").runMethod(true,"length")}, "-",1, 1)),(Object)(_sb.runMethod(true,"getLength")));
  BA.debugLineNum = 485;BA.debugLine="Log(\"UpdateRecord: \" & sb.ToString)";
 Debug.JustUpdateDeviceLine();
-dbutils.__c.runVoidMethod ("LogImpl","98912924",RemoteObject.concat(RemoteObject.createImmutable("UpdateRecord: "),_sb.runMethod(true,"ToString")),0);
+dbutils.__c.runVoidMethod ("LogImpl","97864348",RemoteObject.concat(RemoteObject.createImmutable("UpdateRecord: "),_sb.runMethod(true,"ToString")),0);
  BA.debugLineNum = 487;BA.debugLine="SQL.ExecNonQuery2(sb.ToString, args)";
 Debug.JustUpdateDeviceLine();
 _sql.runVoidMethod ("ExecNonQuery2",(Object)(_sb.runMethod(true,"ToString")),(Object)(_args));

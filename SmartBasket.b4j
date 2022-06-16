@@ -32,7 +32,7 @@ Module9=RegistrationService
 NumberOfFiles=4
 NumberOfLibraries=10
 NumberOfModules=10
-Version=9.3
+Version=9.5
 @EndOfDesignText@
 #Region Project Attributes 
 	#MainFormWidth: 600

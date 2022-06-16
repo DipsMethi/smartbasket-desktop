@@ -40,55 +40,55 @@ public static String  _show() throws Exception{
 RDebugUtils.currentModule="loginform";
 if (Debug.shouldDelegate(ba, "show", false))
 	 {return ((String) Debug.delegate(ba, "show", null));}
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Public Sub Show";
-RDebugUtils.currentLine=196609;
- //BA.debugLineNum = 196609;BA.debugLine="If frmLogin.IsInitialized = False Then";
+RDebugUtils.currentLine=262144;
+ //BA.debugLineNum = 262144;BA.debugLine="Public Sub Show";
+RDebugUtils.currentLine=262145;
+ //BA.debugLineNum = 262145;BA.debugLine="If frmLogin.IsInitialized = False Then";
 if (_frmlogin.IsInitialized()==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="frmLogin.Initialize(\"LoginForm\", 600, 600)";
+RDebugUtils.currentLine=262146;
+ //BA.debugLineNum = 262146;BA.debugLine="frmLogin.Initialize(\"LoginForm\", 600, 600)";
 _frmlogin.Initialize(ba,"LoginForm",600,600);
-RDebugUtils.currentLine=196611;
- //BA.debugLineNum = 196611;BA.debugLine="frmLogin.RootPane.LoadLayout(\"LoginForm\")";
+RDebugUtils.currentLine=262147;
+ //BA.debugLineNum = 262147;BA.debugLine="frmLogin.RootPane.LoadLayout(\"LoginForm\")";
 _frmlogin.getRootPane().LoadLayout(ba,"LoginForm");
  };
-RDebugUtils.currentLine=196614;
- //BA.debugLineNum = 196614;BA.debugLine="Main.Log.Initialize";
+RDebugUtils.currentLine=262150;
+ //BA.debugLineNum = 262150;BA.debugLine="Main.Log.Initialize";
 _main._log /*b4j.example.logger*/ ._initialize /*String*/ (null,ba);
-RDebugUtils.currentLine=196616;
- //BA.debugLineNum = 196616;BA.debugLine="frmLogin.Show";
+RDebugUtils.currentLine=262152;
+ //BA.debugLineNum = 262152;BA.debugLine="frmLogin.Show";
 _frmlogin.Show();
-RDebugUtils.currentLine=196617;
- //BA.debugLineNum = 196617;BA.debugLine="End Sub";
+RDebugUtils.currentLine=262153;
+ //BA.debugLineNum = 262153;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btnclear_click() throws Exception{
 RDebugUtils.currentModule="loginform";
 if (Debug.shouldDelegate(ba, "btnclear_click", false))
 	 {return ((String) Debug.delegate(ba, "btnclear_click", null));}
-RDebugUtils.currentLine=458752;
- //BA.debugLineNum = 458752;BA.debugLine="Private Sub btnClear_Click";
-RDebugUtils.currentLine=458753;
- //BA.debugLineNum = 458753;BA.debugLine="clearForm";
+RDebugUtils.currentLine=524288;
+ //BA.debugLineNum = 524288;BA.debugLine="Private Sub btnClear_Click";
+RDebugUtils.currentLine=524289;
+ //BA.debugLineNum = 524289;BA.debugLine="clearForm";
 _clearform();
-RDebugUtils.currentLine=458754;
- //BA.debugLineNum = 458754;BA.debugLine="End Sub";
+RDebugUtils.currentLine=524290;
+ //BA.debugLineNum = 524290;BA.debugLine="End Sub";
 return "";
 }
 public static String  _clearform() throws Exception{
 RDebugUtils.currentModule="loginform";
 if (Debug.shouldDelegate(ba, "clearform", false))
 	 {return ((String) Debug.delegate(ba, "clearform", null));}
-RDebugUtils.currentLine=524288;
- //BA.debugLineNum = 524288;BA.debugLine="Private Sub clearForm";
-RDebugUtils.currentLine=524289;
- //BA.debugLineNum = 524289;BA.debugLine="txtUsername.Text = \"\"";
+RDebugUtils.currentLine=589824;
+ //BA.debugLineNum = 589824;BA.debugLine="Private Sub clearForm";
+RDebugUtils.currentLine=589825;
+ //BA.debugLineNum = 589825;BA.debugLine="txtUsername.Text = \"\"";
 _txtusername.setText("");
-RDebugUtils.currentLine=524290;
- //BA.debugLineNum = 524290;BA.debugLine="txtPassword.Text = \"\"";
+RDebugUtils.currentLine=589826;
+ //BA.debugLineNum = 589826;BA.debugLine="txtPassword.Text = \"\"";
 _txtpassword.setText("");
-RDebugUtils.currentLine=524291;
- //BA.debugLineNum = 524291;BA.debugLine="End Sub";
+RDebugUtils.currentLine=589827;
+ //BA.debugLineNum = 589827;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btnlogin_click() throws Exception{
@@ -96,88 +96,88 @@ RDebugUtils.currentModule="loginform";
 if (Debug.shouldDelegate(ba, "btnlogin_click", false))
 	 {return ((String) Debug.delegate(ba, "btnlogin_click", null));}
 String _password = "";
-RDebugUtils.currentLine=327680;
- //BA.debugLineNum = 327680;BA.debugLine="Private Sub btnLogin_Click";
-RDebugUtils.currentLine=327682;
- //BA.debugLineNum = 327682;BA.debugLine="Dim username As String = txtUsername.Text";
+RDebugUtils.currentLine=393216;
+ //BA.debugLineNum = 393216;BA.debugLine="Private Sub btnLogin_Click";
+RDebugUtils.currentLine=393218;
+ //BA.debugLineNum = 393218;BA.debugLine="Dim username As String = txtUsername.Text";
 _username = _txtusername.getText();
-RDebugUtils.currentLine=327683;
- //BA.debugLineNum = 327683;BA.debugLine="Dim password As String = txtPassword.Text";
+RDebugUtils.currentLine=393219;
+ //BA.debugLineNum = 393219;BA.debugLine="Dim password As String = txtPassword.Text";
 _password = _txtpassword.getText();
-RDebugUtils.currentLine=327685;
- //BA.debugLineNum = 327685;BA.debugLine="Try";
-try {RDebugUtils.currentLine=327687;
- //BA.debugLineNum = 327687;BA.debugLine="lgService.Initialize";
+RDebugUtils.currentLine=393221;
+ //BA.debugLineNum = 393221;BA.debugLine="Try";
+try {RDebugUtils.currentLine=393223;
+ //BA.debugLineNum = 393223;BA.debugLine="lgService.Initialize";
 _lgservice._initialize /*String*/ (null,ba);
-RDebugUtils.currentLine=327689;
- //BA.debugLineNum = 327689;BA.debugLine="If(username.Length < 1 And password.Length < 1)";
+RDebugUtils.currentLine=393225;
+ //BA.debugLineNum = 393225;BA.debugLine="If(username.Length < 1 And password.Length < 1)";
 if ((_username.length()<1 && _password.length()<1)) { 
-RDebugUtils.currentLine=327690;
- //BA.debugLineNum = 327690;BA.debugLine="xui.MsgboxAsync(\"Please enter username and/pass";
+RDebugUtils.currentLine=393226;
+ //BA.debugLineNum = 393226;BA.debugLine="xui.MsgboxAsync(\"Please enter username and/pass";
 _xui.MsgboxAsync(ba,"Please enter username and/password","Please enter credentials");
-RDebugUtils.currentLine=327691;
- //BA.debugLineNum = 327691;BA.debugLine="Main.log.write(\"Please enter username and/passw";
+RDebugUtils.currentLine=393227;
+ //BA.debugLineNum = 393227;BA.debugLine="Main.log.write(\"Please enter username and/passw";
 _main._log /*b4j.example.logger*/ ._write /*String*/ (null,"Please enter username and/password");
  }else {
-RDebugUtils.currentLine=327694;
- //BA.debugLineNum = 327694;BA.debugLine="If( lgService.Login( username, password ) ) The";
+RDebugUtils.currentLine=393230;
+ //BA.debugLineNum = 393230;BA.debugLine="If( lgService.Login( username, password ) ) The";
 if ((_lgservice._login /*boolean*/ (null,_username,_password))) { 
-RDebugUtils.currentLine=327696;
- //BA.debugLineNum = 327696;BA.debugLine="Close";
+RDebugUtils.currentLine=393232;
+ //BA.debugLineNum = 393232;BA.debugLine="Close";
 _close();
-RDebugUtils.currentLine=327698;
- //BA.debugLineNum = 327698;BA.debugLine="Dashboard.Show";
+RDebugUtils.currentLine=393234;
+ //BA.debugLineNum = 393234;BA.debugLine="Dashboard.Show";
 _dashboard._show /*String*/ ();
  }else {
-RDebugUtils.currentLine=327701;
- //BA.debugLineNum = 327701;BA.debugLine="xui.MsgboxAsync(\"Incorrect username and/ passw";
+RDebugUtils.currentLine=393237;
+ //BA.debugLineNum = 393237;BA.debugLine="xui.MsgboxAsync(\"Incorrect username and/ passw";
 _xui.MsgboxAsync(ba,"Incorrect username and/ password"+anywheresoftware.b4a.keywords.Common.CRLF+"Please varify your credentials","Information");
-RDebugUtils.currentLine=327702;
- //BA.debugLineNum = 327702;BA.debugLine="Main.log.write(\"Incorrect username and/ passwo";
+RDebugUtils.currentLine=393238;
+ //BA.debugLineNum = 393238;BA.debugLine="Main.log.write(\"Incorrect username and/ passwo";
 _main._log /*b4j.example.logger*/ ._write /*String*/ (null,"Incorrect username and/ password"+anywheresoftware.b4a.keywords.Common.CRLF+"Please varify your credentials");
  };
  };
  } 
        catch (Exception e18) {
-			ba.setLastException(e18);RDebugUtils.currentLine=327708;
- //BA.debugLineNum = 327708;BA.debugLine="xui.MsgboxAsync(LastException.Message, \"Exceptio";
+			ba.setLastException(e18);RDebugUtils.currentLine=393244;
+ //BA.debugLineNum = 393244;BA.debugLine="xui.MsgboxAsync(LastException.Message, \"Exceptio";
 _xui.MsgboxAsync(ba,anywheresoftware.b4a.keywords.Common.LastException(ba).getMessage(),"Exception");
-RDebugUtils.currentLine=327709;
- //BA.debugLineNum = 327709;BA.debugLine="Main.log.write(\"[\" & lgService.userDetails.GetSt";
+RDebugUtils.currentLine=393245;
+ //BA.debugLineNum = 393245;BA.debugLine="Main.log.write(\"[\" & lgService.userDetails.GetSt";
 _main._log /*b4j.example.logger*/ ._write /*String*/ (null,"["+_lgservice._userdetails /*anywheresoftware.b4j.objects.SQL.ResultSetWrapper*/ .GetString2((int) (0))+"]"+anywheresoftware.b4a.keywords.Common.LastException(ba).getMessage());
  };
-RDebugUtils.currentLine=327712;
- //BA.debugLineNum = 327712;BA.debugLine="End Sub";
+RDebugUtils.currentLine=393248;
+ //BA.debugLineNum = 393248;BA.debugLine="End Sub";
 return "";
 }
 public static String  _close() throws Exception{
 RDebugUtils.currentModule="loginform";
 if (Debug.shouldDelegate(ba, "close", false))
 	 {return ((String) Debug.delegate(ba, "close", null));}
-RDebugUtils.currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Public Sub Close";
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="frmLogin.Close";
+RDebugUtils.currentLine=327680;
+ //BA.debugLineNum = 327680;BA.debugLine="Public Sub Close";
+RDebugUtils.currentLine=327682;
+ //BA.debugLineNum = 327682;BA.debugLine="frmLogin.Close";
 _frmlogin.Close();
-RDebugUtils.currentLine=262148;
- //BA.debugLineNum = 262148;BA.debugLine="End Sub";
+RDebugUtils.currentLine=327684;
+ //BA.debugLineNum = 327684;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lblregister_mouseclicked(anywheresoftware.b4j.objects.NodeWrapper.MouseEventWrapper _eventdata) throws Exception{
 RDebugUtils.currentModule="loginform";
 if (Debug.shouldDelegate(ba, "lblregister_mouseclicked", false))
 	 {return ((String) Debug.delegate(ba, "lblregister_mouseclicked", new Object[] {_eventdata}));}
-RDebugUtils.currentLine=393216;
- //BA.debugLineNum = 393216;BA.debugLine="Private Sub lblRegister_MouseClicked (EventData As";
-RDebugUtils.currentLine=393217;
- //BA.debugLineNum = 393217;BA.debugLine="If(EventData.PrimaryButtonPressed = True) Then";
+RDebugUtils.currentLine=458752;
+ //BA.debugLineNum = 458752;BA.debugLine="Private Sub lblRegister_MouseClicked (EventData As";
+RDebugUtils.currentLine=458753;
+ //BA.debugLineNum = 458753;BA.debugLine="If(EventData.PrimaryButtonPressed = True) Then";
 if ((_eventdata.getPrimaryButtonPressed()==anywheresoftware.b4a.keywords.Common.True)) { 
-RDebugUtils.currentLine=393218;
- //BA.debugLineNum = 393218;BA.debugLine="RegistrationForm.Show";
+RDebugUtils.currentLine=458754;
+ //BA.debugLineNum = 458754;BA.debugLine="RegistrationForm.Show";
 _registrationform._show /*String*/ ();
  };
-RDebugUtils.currentLine=393220;
- //BA.debugLineNum = 393220;BA.debugLine="End Sub";
+RDebugUtils.currentLine=458756;
+ //BA.debugLineNum = 458756;BA.debugLine="End Sub";
 return "";
 }
 }

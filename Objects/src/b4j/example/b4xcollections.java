@@ -34,32 +34,32 @@ RDebugUtils.currentModule="b4xcollections";
 if (Debug.shouldDelegate(ba, "createbitset", true))
 	 {return ((b4j.example.b4xbitset) Debug.delegate(ba, "createbitset", new Object[] {_size}));}
 b4j.example.b4xbitset _s = null;
-RDebugUtils.currentLine=6356992;
- //BA.debugLineNum = 6356992;BA.debugLine="Public Sub CreateBitSet (Size As Int) As B4XBitSet";
-RDebugUtils.currentLine=6356993;
- //BA.debugLineNum = 6356993;BA.debugLine="Dim s As B4XBitSet";
+RDebugUtils.currentLine=4915200;
+ //BA.debugLineNum = 4915200;BA.debugLine="Public Sub CreateBitSet (Size As Int) As B4XBitSet";
+RDebugUtils.currentLine=4915201;
+ //BA.debugLineNum = 4915201;BA.debugLine="Dim s As B4XBitSet";
 _s = new b4j.example.b4xbitset();
-RDebugUtils.currentLine=6356994;
- //BA.debugLineNum = 6356994;BA.debugLine="s.Initialize(Size)";
+RDebugUtils.currentLine=4915202;
+ //BA.debugLineNum = 4915202;BA.debugLine="s.Initialize(Size)";
 _s._initialize /*String*/ (null,ba,_size);
-RDebugUtils.currentLine=6356995;
- //BA.debugLineNum = 6356995;BA.debugLine="Return s";
+RDebugUtils.currentLine=4915203;
+ //BA.debugLineNum = 4915203;BA.debugLine="Return s";
 if (true) return _s;
-RDebugUtils.currentLine=6356996;
- //BA.debugLineNum = 6356996;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4915204;
+ //BA.debugLineNum = 4915204;BA.debugLine="End Sub";
 return null;
 }
 public static b4j.example.b4xorderedmap  _createorderedmap() throws Exception{
 RDebugUtils.currentModule="b4xcollections";
 if (Debug.shouldDelegate(ba, "createorderedmap", true))
 	 {return ((b4j.example.b4xorderedmap) Debug.delegate(ba, "createorderedmap", null));}
-RDebugUtils.currentLine=6225920;
- //BA.debugLineNum = 6225920;BA.debugLine="Public Sub CreateOrderedMap As B4XOrderedMap";
-RDebugUtils.currentLine=6225921;
- //BA.debugLineNum = 6225921;BA.debugLine="Return CreateOrderedMap2(Null, Null)";
+RDebugUtils.currentLine=4784128;
+ //BA.debugLineNum = 4784128;BA.debugLine="Public Sub CreateOrderedMap As B4XOrderedMap";
+RDebugUtils.currentLine=4784129;
+ //BA.debugLineNum = 4784129;BA.debugLine="Return CreateOrderedMap2(Null, Null)";
 if (true) return _createorderedmap2((anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(anywheresoftware.b4a.keywords.Common.Null)),(anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(anywheresoftware.b4a.keywords.Common.Null)));
-RDebugUtils.currentLine=6225922;
- //BA.debugLineNum = 6225922;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4784130;
+ //BA.debugLineNum = 4784130;BA.debugLine="End Sub";
 return null;
 }
 public static b4j.example.b4xorderedmap  _createorderedmap2(anywheresoftware.b4a.objects.collections.List _keys,anywheresoftware.b4a.objects.collections.List _values) throws Exception{
@@ -68,48 +68,48 @@ if (Debug.shouldDelegate(ba, "createorderedmap2", true))
 	 {return ((b4j.example.b4xorderedmap) Debug.delegate(ba, "createorderedmap2", new Object[] {_keys,_values}));}
 b4j.example.b4xorderedmap _m = null;
 int _i = 0;
-RDebugUtils.currentLine=6291456;
- //BA.debugLineNum = 6291456;BA.debugLine="Public Sub CreateOrderedMap2 (Keys As List, Values";
-RDebugUtils.currentLine=6291457;
- //BA.debugLineNum = 6291457;BA.debugLine="Dim m As B4XOrderedMap";
+RDebugUtils.currentLine=4849664;
+ //BA.debugLineNum = 4849664;BA.debugLine="Public Sub CreateOrderedMap2 (Keys As List, Values";
+RDebugUtils.currentLine=4849665;
+ //BA.debugLineNum = 4849665;BA.debugLine="Dim m As B4XOrderedMap";
 _m = new b4j.example.b4xorderedmap();
-RDebugUtils.currentLine=6291458;
- //BA.debugLineNum = 6291458;BA.debugLine="m.Initialize";
+RDebugUtils.currentLine=4849666;
+ //BA.debugLineNum = 4849666;BA.debugLine="m.Initialize";
 _m._initialize /*String*/ (null,ba);
-RDebugUtils.currentLine=6291459;
- //BA.debugLineNum = 6291459;BA.debugLine="If Keys <> Null And Values <> Null And Keys.IsIni";
+RDebugUtils.currentLine=4849667;
+ //BA.debugLineNum = 4849667;BA.debugLine="If Keys <> Null And Values <> Null And Keys.IsIni";
 if (_keys!= null && _values!= null && _keys.IsInitialized() && _values.IsInitialized()) { 
-RDebugUtils.currentLine=6291460;
- //BA.debugLineNum = 6291460;BA.debugLine="For i = 0 To Keys.Size - 1";
+RDebugUtils.currentLine=4849668;
+ //BA.debugLineNum = 4849668;BA.debugLine="For i = 0 To Keys.Size - 1";
 {
 final int step4 = 1;
 final int limit4 = (int) (_keys.getSize()-1);
 _i = (int) (0) ;
 for (;_i <= limit4 ;_i = _i + step4 ) {
-RDebugUtils.currentLine=6291461;
- //BA.debugLineNum = 6291461;BA.debugLine="m.Put(Keys.Get(i), Values.Get(i))";
+RDebugUtils.currentLine=4849669;
+ //BA.debugLineNum = 4849669;BA.debugLine="m.Put(Keys.Get(i), Values.Get(i))";
 _m._put /*String*/ (null,_keys.Get(_i),_values.Get(_i));
  }
 };
  };
-RDebugUtils.currentLine=6291464;
- //BA.debugLineNum = 6291464;BA.debugLine="Return m";
+RDebugUtils.currentLine=4849672;
+ //BA.debugLineNum = 4849672;BA.debugLine="Return m";
 if (true) return _m;
-RDebugUtils.currentLine=6291465;
- //BA.debugLineNum = 6291465;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4849673;
+ //BA.debugLineNum = 4849673;BA.debugLine="End Sub";
 return null;
 }
 public static b4j.example.b4xset  _createset() throws Exception{
 RDebugUtils.currentModule="b4xcollections";
 if (Debug.shouldDelegate(ba, "createset", true))
 	 {return ((b4j.example.b4xset) Debug.delegate(ba, "createset", null));}
-RDebugUtils.currentLine=6094848;
- //BA.debugLineNum = 6094848;BA.debugLine="Public Sub CreateSet As B4XSet";
-RDebugUtils.currentLine=6094849;
- //BA.debugLineNum = 6094849;BA.debugLine="Return CreateSet2(Null)";
+RDebugUtils.currentLine=4653056;
+ //BA.debugLineNum = 4653056;BA.debugLine="Public Sub CreateSet As B4XSet";
+RDebugUtils.currentLine=4653057;
+ //BA.debugLineNum = 4653057;BA.debugLine="Return CreateSet2(Null)";
 if (true) return _createset2((anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(anywheresoftware.b4a.keywords.Common.Null)));
-RDebugUtils.currentLine=6094850;
- //BA.debugLineNum = 6094850;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4653058;
+ //BA.debugLineNum = 4653058;BA.debugLine="End Sub";
 return null;
 }
 public static b4j.example.b4xset  _createset2(anywheresoftware.b4a.objects.collections.List _values) throws Exception{
@@ -118,19 +118,19 @@ if (Debug.shouldDelegate(ba, "createset2", true))
 	 {return ((b4j.example.b4xset) Debug.delegate(ba, "createset2", new Object[] {_values}));}
 b4j.example.b4xset _s = null;
 Object _v = null;
-RDebugUtils.currentLine=6160384;
- //BA.debugLineNum = 6160384;BA.debugLine="Public Sub CreateSet2 (Values As List) As B4XSet";
-RDebugUtils.currentLine=6160385;
- //BA.debugLineNum = 6160385;BA.debugLine="Dim s As B4XSet";
+RDebugUtils.currentLine=4718592;
+ //BA.debugLineNum = 4718592;BA.debugLine="Public Sub CreateSet2 (Values As List) As B4XSet";
+RDebugUtils.currentLine=4718593;
+ //BA.debugLineNum = 4718593;BA.debugLine="Dim s As B4XSet";
 _s = new b4j.example.b4xset();
-RDebugUtils.currentLine=6160386;
- //BA.debugLineNum = 6160386;BA.debugLine="s.Initialize";
+RDebugUtils.currentLine=4718594;
+ //BA.debugLineNum = 4718594;BA.debugLine="s.Initialize";
 _s._initialize /*String*/ (null,ba);
-RDebugUtils.currentLine=6160387;
- //BA.debugLineNum = 6160387;BA.debugLine="If Values <> Null And Values.IsInitialized Then";
+RDebugUtils.currentLine=4718595;
+ //BA.debugLineNum = 4718595;BA.debugLine="If Values <> Null And Values.IsInitialized Then";
 if (_values!= null && _values.IsInitialized()) { 
-RDebugUtils.currentLine=6160388;
- //BA.debugLineNum = 6160388;BA.debugLine="For Each v As Object In Values";
+RDebugUtils.currentLine=4718596;
+ //BA.debugLineNum = 4718596;BA.debugLine="For Each v As Object In Values";
 {
 final anywheresoftware.b4a.BA.IterableList group4 = _values;
 final int groupLen4 = group4.getSize()
@@ -138,17 +138,17 @@ final int groupLen4 = group4.getSize()
 ;
 for (; index4 < groupLen4;index4++){
 _v = group4.Get(index4);
-RDebugUtils.currentLine=6160389;
- //BA.debugLineNum = 6160389;BA.debugLine="s.Add(v)";
+RDebugUtils.currentLine=4718597;
+ //BA.debugLineNum = 4718597;BA.debugLine="s.Add(v)";
 _s._add /*String*/ (null,_v);
  }
 };
  };
-RDebugUtils.currentLine=6160392;
- //BA.debugLineNum = 6160392;BA.debugLine="Return s";
+RDebugUtils.currentLine=4718600;
+ //BA.debugLineNum = 4718600;BA.debugLine="Return s";
 if (true) return _s;
-RDebugUtils.currentLine=6160393;
- //BA.debugLineNum = 6160393;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4718601;
+ //BA.debugLineNum = 4718601;BA.debugLine="End Sub";
 return null;
 }
 }
