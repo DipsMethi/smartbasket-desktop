@@ -8,7 +8,7 @@ public class b4xcollections_subs_0 {
 
 public static RemoteObject  _createbitset(RemoteObject _size) throws Exception{
 try {
-		Debug.PushSubsStack("CreateBitSet (b4xcollections) ","b4xcollections",14,b4xcollections.ba,b4xcollections.mostCurrent,52);
+		Debug.PushSubsStack("CreateBitSet (b4xcollections) ","b4xcollections",13,b4xcollections.ba,b4xcollections.mostCurrent,52);
 if (RapidSub.canDelegate("createbitset")) { return b4j.example.b4xcollections.remoteMe.runUserSub(false, "b4xcollections","createbitset", _size);}
 RemoteObject _s = RemoteObject.declareNull("b4j.example.b4xbitset");
 Debug.locals.put("Size", _size);
@@ -35,7 +35,7 @@ finally {
 		}}
 public static RemoteObject  _createorderedmap() throws Exception{
 try {
-		Debug.PushSubsStack("CreateOrderedMap (b4xcollections) ","b4xcollections",14,b4xcollections.ba,b4xcollections.mostCurrent,30);
+		Debug.PushSubsStack("CreateOrderedMap (b4xcollections) ","b4xcollections",13,b4xcollections.ba,b4xcollections.mostCurrent,30);
 if (RapidSub.canDelegate("createorderedmap")) { return b4j.example.b4xcollections.remoteMe.runUserSub(false, "b4xcollections","createorderedmap");}
  BA.debugLineNum = 30;BA.debugLine="Public Sub CreateOrderedMap As B4XOrderedMap";
 Debug.JustUpdateDeviceLine();
@@ -54,7 +54,7 @@ finally {
 		}}
 public static RemoteObject  _createorderedmap2(RemoteObject _keys,RemoteObject _values) throws Exception{
 try {
-		Debug.PushSubsStack("CreateOrderedMap2 (b4xcollections) ","b4xcollections",14,b4xcollections.ba,b4xcollections.mostCurrent,38);
+		Debug.PushSubsStack("CreateOrderedMap2 (b4xcollections) ","b4xcollections",13,b4xcollections.ba,b4xcollections.mostCurrent,38);
 if (RapidSub.canDelegate("createorderedmap2")) { return b4j.example.b4xcollections.remoteMe.runUserSub(false, "b4xcollections","createorderedmap2", _keys, _values);}
 RemoteObject _m = RemoteObject.declareNull("b4j.example.b4xorderedmap");
 int _i = 0;
@@ -101,7 +101,7 @@ finally {
 		}}
 public static RemoteObject  _createset() throws Exception{
 try {
-		Debug.PushSubsStack("CreateSet (b4xcollections) ","b4xcollections",14,b4xcollections.ba,b4xcollections.mostCurrent,9);
+		Debug.PushSubsStack("CreateSet (b4xcollections) ","b4xcollections",13,b4xcollections.ba,b4xcollections.mostCurrent,9);
 if (RapidSub.canDelegate("createset")) { return b4j.example.b4xcollections.remoteMe.runUserSub(false, "b4xcollections","createset");}
  BA.debugLineNum = 9;BA.debugLine="Public Sub CreateSet As B4XSet";
 Debug.JustUpdateDeviceLine();
@@ -120,7 +120,7 @@ finally {
 		}}
 public static RemoteObject  _createset2(RemoteObject _values) throws Exception{
 try {
-		Debug.PushSubsStack("CreateSet2 (b4xcollections) ","b4xcollections",14,b4xcollections.ba,b4xcollections.mostCurrent,16);
+		Debug.PushSubsStack("CreateSet2 (b4xcollections) ","b4xcollections",13,b4xcollections.ba,b4xcollections.mostCurrent,16);
 if (RapidSub.canDelegate("createset2")) { return b4j.example.b4xcollections.remoteMe.runUserSub(false, "b4xcollections","createset2", _values);}
 RemoteObject _s = RemoteObject.declareNull("b4j.example.b4xset");
 RemoteObject _v = RemoteObject.declareNull("Object");

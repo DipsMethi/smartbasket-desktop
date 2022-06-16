@@ -1,6 +1,6 @@
 b4j.example
 0
-12
+10
 loginservice
 databaseservice
 registrationservice
@@ -9,16 +9,12 @@ item
 logger
 b4xbitset
 b4xbytesbuilder
-b4xcache
-b4xcomparatorsort
 b4xorderedmap
 b4xset
-8
+6
 b4xbitset
 b4xbytesbuilder
-b4xcache
 b4xcollections
-b4xcomparatorsort
 b4xorderedmap
 b4xset
 dbutils
@@ -306,7 +302,7 @@ b4xbitset,class_globals,0,0,1,8
 
 
 
-b4xbitset,clear,0,0,54,60
+b4xbitset,clear,0,0,53,59
 
 
 
@@ -326,11 +322,7 @@ b4xbitset,set,0,0,16,35
 
 
 
-b4xbytesbuilder,append,0,0,24,26
-
-
-,append2,,changelength
-b4xbytesbuilder,append2,0,0,31,35
+b4xbytesbuilder,append,0,0,24,28
 
 
 ,changelength
@@ -338,31 +330,31 @@ b4xbytesbuilder,changelength,0,0,12,21
 
 
 
+b4xbytesbuilder,append2,0,0,33,37
+
+
+,changelength
 b4xbytesbuilder,class_globals,0,0,1,4
 
 
 
-b4xbytesbuilder,clear,0,0,37,39
+b4xbytesbuilder,clear,0,0,39,41
 
 
 ,changelength
-b4xbytesbuilder,getbuffer,0,0,103,104
+b4xbytesbuilder,getinternalbuffer,0,0,104,106
 
 
 
-b4xbytesbuilder,getinternalbuffer,0,0,127,129
+b4xbytesbuilder,getlength,0,0,94,96
 
 
 
-b4xbytesbuilder,getlength,0,0,92,94
-
-
-
-b4xbytesbuilder,indexof,0,0,107,109
+b4xbytesbuilder,indexof,0,0,109,111
 
 
 ,indexof2
-b4xbytesbuilder,indexof2,0,0,112,124
+b4xbytesbuilder,indexof2,0,0,114,126
 
 
 
@@ -370,142 +362,30 @@ b4xbytesbuilder,initialize,0,0,6,9
 
 
 
-b4xbytesbuilder,insert,0,0,43,53
+b4xbytesbuilder,insert,0,0,45,55
 
 
-,append,,subarray,,changelength,,append2,,subarray2
-b4xbytesbuilder,subarray,0,0,80,82
+,append,,subarray,,changelength,,subarray2
+b4xbytesbuilder,subarray,0,0,82,84
 
 
 ,subarray2
-b4xbytesbuilder,remove,0,0,69,77
+b4xbytesbuilder,remove,0,0,71,79
 
 
 ,subarray2,,subarray,,changelength
-b4xbytesbuilder,subarray2,0,0,86,90
+b4xbytesbuilder,subarray2,0,0,88,92
 
 
 
-b4xbytesbuilder,set,0,0,56,66
+b4xbytesbuilder,set,0,0,58,68
 
 
-,append,,changelength,,append2
-b4xbytesbuilder,toarray,0,0,97,99
+,append,,changelength
+b4xbytesbuilder,toarray,0,0,99,101
 
 
 ,subarray,,subarray2
-b4xcache,class_globals,0,0,1,7
-
-
-
-b4xcache,containskey,0,0,66,68
-
-
-b4xorderedmap,containskey
-b4xcache,createb4xcacheitem,0,0,102,109
-
-
-
-b4xcache,get,0,0,24,31
-
-
-b4xorderedmap,get
-b4xcache,getmaxsize,0,0,19,21
-
-
-
-b4xcache,initialize,0,0,9,11
-
-
-b4xorderedmap,initialize
-b4xcache,iseternal,0,0,60,63
-
-
-b4xorderedmap,get
-b4xcache,keys,0,0,98,100
-
-
-b4xorderedmap,getkeys
-b4xcache,put,0,0,35,40
-
-
-,iseternal,b4xorderedmap,put,,createb4xcacheitem,,trimifoversize,b4xorderedmap,get,b4xorderedmap,getsize,b4xorderedmap,getvalues,b4xorderedmap,remove
-b4xcache,trimifoversize,0,0,70,79
-
-
-b4xorderedmap,getsize,b4xorderedmap,getvalues,b4xorderedmap,remove
-b4xcache,puteternal,0,0,44,52
-
-
-,iseternal,,createb4xcacheitem,b4xorderedmap,put,b4xorderedmap,get
-b4xcache,remove,0,0,55,58
-
-
-,iseternal,b4xorderedmap,remove,b4xorderedmap,get
-b4xcache,removeolditems,0,0,82,90
-
-
-b4xorderedmap,getvalues,b4xorderedmap,remove
-b4xcache,setmaxsize,0,0,14,17
-
-
-,trimifoversize,b4xorderedmap,getsize,b4xorderedmap,getvalues,b4xorderedmap,remove
-b4xcache,size,0,0,93,95
-
-
-b4xorderedmap,getsize
-b4xorderedmap,containskey,0,0,46,48
-
-
-
-b4xorderedmap,get,0,0,37,39
-
-
-
-b4xorderedmap,initialize,0,0,6,9
-
-
-
-b4xorderedmap,getkeys,0,0,32,34
-
-
-
-b4xorderedmap,put,0,0,12,17
-
-
-
-b4xorderedmap,remove,0,0,20,24
-
-
-
-b4xorderedmap,getvalues,0,0,55,62
-
-
-
-b4xorderedmap,getsize,0,0,50,52
-
-
-
-b4xorderedmap,class_globals,0,0,1,4
-
-
-
-b4xorderedmap,clear,0,0,26,29
-
-
-
-b4xorderedmap,getdataforserializator,0,0,65,67
-
-
-
-b4xorderedmap,getdefault,0,0,42,44
-
-
-
-b4xorderedmap,setdatafromserializator,0,0,70,74
-
-
-
 b4xcollections,createbitset,0,0,52,56
 
 
@@ -527,6 +407,58 @@ b4xcollections,createset2,0,0,16,25
 
 b4xset,initialize,b4xset,add,b4xorderedmap,initialize,b4xorderedmap,put
 b4xcollections,process_globals,0,1,2,4
+
+
+
+b4xorderedmap,initialize,0,0,6,9
+
+
+
+b4xorderedmap,put,0,0,12,17
+
+
+
+b4xorderedmap,class_globals,0,0,1,4
+
+
+
+b4xorderedmap,clear,0,0,26,29
+
+
+
+b4xorderedmap,containskey,0,0,46,48
+
+
+
+b4xorderedmap,get,0,0,37,39
+
+
+
+b4xorderedmap,getdataforserializator,0,0,65,67
+
+
+
+b4xorderedmap,getdefault,0,0,42,44
+
+
+
+b4xorderedmap,getkeys,0,0,32,34
+
+
+
+b4xorderedmap,getsize,0,0,50,52
+
+
+
+b4xorderedmap,getvalues,0,0,55,62
+
+
+
+b4xorderedmap,remove,0,0,20,24
+
+
+
+b4xorderedmap,setdatafromserializator,0,0,70,74
 
 
 
@@ -562,30 +494,6 @@ b4xset,remove,0,0,13,15
 
 
 b4xorderedmap,remove
-b4xcomparatorsort,class_globals,0,0,1,2
-
-
-
-b4xcomparatorsort,initialize,0,0,4,5
-
-
-
-b4xcomparatorsort,partition,0,0,30,42
-
-
-,swap
-b4xcomparatorsort,swap,0,0,44,48
-
-
-
-b4xcomparatorsort,quicksort,0,0,21,28
-
-
-,partition,,quicksort,,swap
-b4xcomparatorsort,sort,0,0,12,18
-
-
-,quicksort,,partition,,swap
 dbutils,copydbfromassets,0,0,29,35
 
 

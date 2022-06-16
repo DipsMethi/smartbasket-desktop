@@ -45,22 +45,22 @@ public b4j.example.dbutils _dbutils = null;
 public String  _class_globals(b4j.example.item __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="item";
-RDebugUtils.currentLine=10223616;
- //BA.debugLineNum = 10223616;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=10223617;
- //BA.debugLineNum = 10223617;BA.debugLine="Private fx As JFX";
+RDebugUtils.currentLine=8781824;
+ //BA.debugLineNum = 8781824;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=8781825;
+ //BA.debugLineNum = 8781825;BA.debugLine="Private fx As JFX";
 _fx = new anywheresoftware.b4j.objects.JFX();
-RDebugUtils.currentLine=10223619;
- //BA.debugLineNum = 10223619;BA.debugLine="Private id_ As Int";
+RDebugUtils.currentLine=8781827;
+ //BA.debugLineNum = 8781827;BA.debugLine="Private id_ As Int";
 _id_ = 0;
-RDebugUtils.currentLine=10223620;
- //BA.debugLineNum = 10223620;BA.debugLine="Private name_ As String";
+RDebugUtils.currentLine=8781828;
+ //BA.debugLineNum = 8781828;BA.debugLine="Private name_ As String";
 _name_ = "";
-RDebugUtils.currentLine=10223621;
- //BA.debugLineNum = 10223621;BA.debugLine="Private price_ As Double";
+RDebugUtils.currentLine=8781829;
+ //BA.debugLineNum = 8781829;BA.debugLine="Private price_ As Double";
 _price_ = 0;
-RDebugUtils.currentLine=10223623;
- //BA.debugLineNum = 10223623;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8781831;
+ //BA.debugLineNum = 8781831;BA.debugLine="End Sub";
 return "";
 }
 public int  _getid(b4j.example.item __ref) throws Exception{
@@ -68,13 +68,13 @@ __ref = this;
 RDebugUtils.currentModule="item";
 if (Debug.shouldDelegate(ba, "getid", false))
 	 {return ((Integer) Debug.delegate(ba, "getid", null));}
-RDebugUtils.currentLine=10354688;
- //BA.debugLineNum = 10354688;BA.debugLine="Public Sub GetID() As Int";
-RDebugUtils.currentLine=10354689;
- //BA.debugLineNum = 10354689;BA.debugLine="Return id_";
+RDebugUtils.currentLine=8912896;
+ //BA.debugLineNum = 8912896;BA.debugLine="Public Sub GetID() As Int";
+RDebugUtils.currentLine=8912897;
+ //BA.debugLineNum = 8912897;BA.debugLine="Return id_";
 if (true) return __ref._id_ /*int*/ ;
-RDebugUtils.currentLine=10354690;
- //BA.debugLineNum = 10354690;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8912898;
+ //BA.debugLineNum = 8912898;BA.debugLine="End Sub";
 return 0;
 }
 public String  _getname(b4j.example.item __ref) throws Exception{
@@ -82,13 +82,13 @@ __ref = this;
 RDebugUtils.currentModule="item";
 if (Debug.shouldDelegate(ba, "getname", false))
 	 {return ((String) Debug.delegate(ba, "getname", null));}
-RDebugUtils.currentLine=10420224;
- //BA.debugLineNum = 10420224;BA.debugLine="Public Sub GetName() As String";
-RDebugUtils.currentLine=10420225;
- //BA.debugLineNum = 10420225;BA.debugLine="Return name_";
+RDebugUtils.currentLine=8978432;
+ //BA.debugLineNum = 8978432;BA.debugLine="Public Sub GetName() As String";
+RDebugUtils.currentLine=8978433;
+ //BA.debugLineNum = 8978433;BA.debugLine="Return name_";
 if (true) return __ref._name_ /*String*/ ;
-RDebugUtils.currentLine=10420226;
- //BA.debugLineNum = 10420226;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8978434;
+ //BA.debugLineNum = 8978434;BA.debugLine="End Sub";
 return "";
 }
 public String  _getprice(b4j.example.item __ref) throws Exception{
@@ -96,13 +96,13 @@ __ref = this;
 RDebugUtils.currentModule="item";
 if (Debug.shouldDelegate(ba, "getprice", false))
 	 {return ((String) Debug.delegate(ba, "getprice", null));}
-RDebugUtils.currentLine=10485760;
- //BA.debugLineNum = 10485760;BA.debugLine="Public Sub GetPrice() As String";
-RDebugUtils.currentLine=10485761;
- //BA.debugLineNum = 10485761;BA.debugLine="Return price_";
+RDebugUtils.currentLine=9043968;
+ //BA.debugLineNum = 9043968;BA.debugLine="Public Sub GetPrice() As String";
+RDebugUtils.currentLine=9043969;
+ //BA.debugLineNum = 9043969;BA.debugLine="Return price_";
 if (true) return BA.NumberToString(__ref._price_ /*double*/ );
-RDebugUtils.currentLine=10485762;
- //BA.debugLineNum = 10485762;BA.debugLine="End Sub";
+RDebugUtils.currentLine=9043970;
+ //BA.debugLineNum = 9043970;BA.debugLine="End Sub";
 return "";
 }
 public String  _initialize(b4j.example.item __ref,anywheresoftware.b4a.BA _ba,int _id,String _name,double _price) throws Exception{
@@ -111,33 +111,33 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="item";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba,_id,_name,_price}));}
-RDebugUtils.currentLine=10289152;
- //BA.debugLineNum = 10289152;BA.debugLine="Public Sub Initialize(id As Int, name As String, p";
-RDebugUtils.currentLine=10289153;
- //BA.debugLineNum = 10289153;BA.debugLine="If( Not ( id = Null And name = Null And price = N";
+RDebugUtils.currentLine=8847360;
+ //BA.debugLineNum = 8847360;BA.debugLine="Public Sub Initialize(id As Int, name As String, p";
+RDebugUtils.currentLine=8847361;
+ //BA.debugLineNum = 8847361;BA.debugLine="If( Not ( id = Null And name = Null And price = N";
 if ((__c.Not(_id==(double)(BA.ObjectToNumber(__c.Null)) && _name== null && _price==(double)(BA.ObjectToNumber(__c.Null))))) { 
-RDebugUtils.currentLine=10289154;
- //BA.debugLineNum = 10289154;BA.debugLine="id_ = id";
+RDebugUtils.currentLine=8847362;
+ //BA.debugLineNum = 8847362;BA.debugLine="id_ = id";
 __ref._id_ /*int*/  = _id;
-RDebugUtils.currentLine=10289155;
- //BA.debugLineNum = 10289155;BA.debugLine="name_ = name";
+RDebugUtils.currentLine=8847363;
+ //BA.debugLineNum = 8847363;BA.debugLine="name_ = name";
 __ref._name_ /*String*/  = _name;
-RDebugUtils.currentLine=10289156;
- //BA.debugLineNum = 10289156;BA.debugLine="price_ = price";
+RDebugUtils.currentLine=8847364;
+ //BA.debugLineNum = 8847364;BA.debugLine="price_ = price";
 __ref._price_ /*double*/  = _price;
  }else {
-RDebugUtils.currentLine=10289158;
- //BA.debugLineNum = 10289158;BA.debugLine="id_ = 0";
+RDebugUtils.currentLine=8847366;
+ //BA.debugLineNum = 8847366;BA.debugLine="id_ = 0";
 __ref._id_ /*int*/  = (int) (0);
-RDebugUtils.currentLine=10289159;
- //BA.debugLineNum = 10289159;BA.debugLine="name_ = \"\"";
+RDebugUtils.currentLine=8847367;
+ //BA.debugLineNum = 8847367;BA.debugLine="name_ = \"\"";
 __ref._name_ /*String*/  = "";
-RDebugUtils.currentLine=10289160;
- //BA.debugLineNum = 10289160;BA.debugLine="price_ = 0.0";
+RDebugUtils.currentLine=8847368;
+ //BA.debugLineNum = 8847368;BA.debugLine="price_ = 0.0";
 __ref._price_ /*double*/  = 0.0;
  };
-RDebugUtils.currentLine=10289162;
- //BA.debugLineNum = 10289162;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8847370;
+ //BA.debugLineNum = 8847370;BA.debugLine="End Sub";
 return "";
 }
 }

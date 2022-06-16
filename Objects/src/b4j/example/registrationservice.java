@@ -47,13 +47,13 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="registrationservice";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=9043968;
- //BA.debugLineNum = 9043968;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=9043969;
- //BA.debugLineNum = 9043969;BA.debugLine="database.Initialize";
+RDebugUtils.currentLine=2949120;
+ //BA.debugLineNum = 2949120;BA.debugLine="Public Sub Initialize";
+RDebugUtils.currentLine=2949121;
+ //BA.debugLineNum = 2949121;BA.debugLine="database.Initialize";
 __ref._database /*b4j.example.databaseservice*/ ._initialize /*String*/ (null,ba);
-RDebugUtils.currentLine=9043970;
- //BA.debugLineNum = 9043970;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2949122;
+ //BA.debugLineNum = 2949122;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _registeruser(b4j.example.registrationservice __ref,String _id,String _firstname,String _lastname,String _email,String _gender,String _cell,String _addr,String _password,byte _role_id) throws Exception{
@@ -63,61 +63,61 @@ if (Debug.shouldDelegate(ba, "registeruser", false))
 	 {return ((Boolean) Debug.delegate(ba, "registeruser", new Object[] {_id,_firstname,_lastname,_email,_gender,_cell,_addr,_password,_role_id}));}
 boolean _success = false;
 String _status = "";
-RDebugUtils.currentLine=9109504;
- //BA.debugLineNum = 9109504;BA.debugLine="Public Sub RegisterUser( id As String, firstname A";
-RDebugUtils.currentLine=9109506;
- //BA.debugLineNum = 9109506;BA.debugLine="Dim success As Boolean = False";
+RDebugUtils.currentLine=3014656;
+ //BA.debugLineNum = 3014656;BA.debugLine="Public Sub RegisterUser( id As String, firstname A";
+RDebugUtils.currentLine=3014658;
+ //BA.debugLineNum = 3014658;BA.debugLine="Dim success As Boolean = False";
 _success = __c.False;
-RDebugUtils.currentLine=9109507;
- //BA.debugLineNum = 9109507;BA.debugLine="Dim status As String = \"Active\"";
+RDebugUtils.currentLine=3014659;
+ //BA.debugLineNum = 3014659;BA.debugLine="Dim status As String = \"Active\"";
 _status = "Active";
-RDebugUtils.currentLine=9109509;
- //BA.debugLineNum = 9109509;BA.debugLine="Try";
-try {RDebugUtils.currentLine=9109510;
- //BA.debugLineNum = 9109510;BA.debugLine="If database.IsConnected = True Then";
+RDebugUtils.currentLine=3014661;
+ //BA.debugLineNum = 3014661;BA.debugLine="Try";
+try {RDebugUtils.currentLine=3014662;
+ //BA.debugLineNum = 3014662;BA.debugLine="If database.IsConnected = True Then";
 if (__ref._database /*b4j.example.databaseservice*/ ._isconnected /*boolean*/ (null)==__c.True) { 
-RDebugUtils.currentLine=9109511;
- //BA.debugLineNum = 9109511;BA.debugLine="database.sql.ExecNonQuery2(\"INSERT INTO users V";
+RDebugUtils.currentLine=3014663;
+ //BA.debugLineNum = 3014663;BA.debugLine="database.sql.ExecNonQuery2(\"INSERT INTO users V";
 __ref._database /*b4j.example.databaseservice*/ ._sql /*anywheresoftware.b4j.objects.SQL*/ .ExecNonQuery2("INSERT INTO users VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",anywheresoftware.b4a.keywords.Common.ArrayToList(new Object[]{(Object)(_id),(Object)(_firstname),(Object)(_lastname),(Object)(_email),(Object)(_gender),(Object)(_cell),(Object)(_addr),(Object)(_password),(Object)(_status),(Object)(_role_id)}));
-RDebugUtils.currentLine=9109512;
- //BA.debugLineNum = 9109512;BA.debugLine="success = True";
+RDebugUtils.currentLine=3014664;
+ //BA.debugLineNum = 3014664;BA.debugLine="success = True";
 _success = __c.True;
  };
  } 
        catch (Exception e9) {
-			ba.setLastException(e9);RDebugUtils.currentLine=9109515;
- //BA.debugLineNum = 9109515;BA.debugLine="Main.log.write(\"[\" & LoginForm.lgService.userDet";
+			ba.setLastException(e9);RDebugUtils.currentLine=3014667;
+ //BA.debugLineNum = 3014667;BA.debugLine="Main.log.write(\"[\" & LoginForm.lgService.userDet";
 _main._log /*b4j.example.logger*/ ._write /*String*/ (null,"["+_loginform._lgservice /*b4j.example.loginservice*/ ._userdetails /*anywheresoftware.b4j.objects.SQL.ResultSetWrapper*/ .GetString2((int) (0))+"] "+__c.LastException(ba).getMessage());
-RDebugUtils.currentLine=9109516;
- //BA.debugLineNum = 9109516;BA.debugLine="xui.MsgboxAsync(LastException, \"Exception\")";
+RDebugUtils.currentLine=3014668;
+ //BA.debugLineNum = 3014668;BA.debugLine="xui.MsgboxAsync(LastException, \"Exception\")";
 __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .MsgboxAsync(ba,BA.ObjectToString(__c.LastException(ba)),"Exception");
  };
-RDebugUtils.currentLine=9109518;
- //BA.debugLineNum = 9109518;BA.debugLine="database.Disconnect";
+RDebugUtils.currentLine=3014670;
+ //BA.debugLineNum = 3014670;BA.debugLine="database.Disconnect";
 __ref._database /*b4j.example.databaseservice*/ ._disconnect /*String*/ (null);
-RDebugUtils.currentLine=9109520;
- //BA.debugLineNum = 9109520;BA.debugLine="Return success";
+RDebugUtils.currentLine=3014672;
+ //BA.debugLineNum = 3014672;BA.debugLine="Return success";
 if (true) return _success;
-RDebugUtils.currentLine=9109521;
- //BA.debugLineNum = 9109521;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3014673;
+ //BA.debugLineNum = 3014673;BA.debugLine="End Sub";
 return false;
 }
 public String  _class_globals(b4j.example.registrationservice __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="registrationservice";
-RDebugUtils.currentLine=8978432;
- //BA.debugLineNum = 8978432;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=8978433;
- //BA.debugLineNum = 8978433;BA.debugLine="Private fx As JFX";
+RDebugUtils.currentLine=2883584;
+ //BA.debugLineNum = 2883584;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=2883585;
+ //BA.debugLineNum = 2883585;BA.debugLine="Private fx As JFX";
 _fx = new anywheresoftware.b4j.objects.JFX();
-RDebugUtils.currentLine=8978434;
- //BA.debugLineNum = 8978434;BA.debugLine="Private xui As XUI";
+RDebugUtils.currentLine=2883586;
+ //BA.debugLineNum = 2883586;BA.debugLine="Private xui As XUI";
 _xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
-RDebugUtils.currentLine=8978435;
- //BA.debugLineNum = 8978435;BA.debugLine="Private database As DatabaseService";
+RDebugUtils.currentLine=2883587;
+ //BA.debugLineNum = 2883587;BA.debugLine="Private database As DatabaseService";
 _database = new b4j.example.databaseservice();
-RDebugUtils.currentLine=8978436;
- //BA.debugLineNum = 8978436;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2883588;
+ //BA.debugLineNum = 2883588;BA.debugLine="End Sub";
 return "";
 }
 public String  _registertag(b4j.example.registrationservice __ref,String _tagid) throws Exception{
@@ -125,10 +125,10 @@ __ref = this;
 RDebugUtils.currentModule="registrationservice";
 if (Debug.shouldDelegate(ba, "registertag", false))
 	 {return ((String) Debug.delegate(ba, "registertag", new Object[] {_tagid}));}
-RDebugUtils.currentLine=9175040;
- //BA.debugLineNum = 9175040;BA.debugLine="Public Sub RegisterTag(tagID As String)";
-RDebugUtils.currentLine=9175042;
- //BA.debugLineNum = 9175042;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3080192;
+ //BA.debugLineNum = 3080192;BA.debugLine="Public Sub RegisterTag(tagID As String)";
+RDebugUtils.currentLine=3080194;
+ //BA.debugLineNum = 3080194;BA.debugLine="End Sub";
 return "";
 }
 }
